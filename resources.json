@@ -1,0 +1,76 @@
+{
+    "resources":[
+        {
+            "resource-key": "ESP32-DevKit",
+            "title": "ESP32-DevKit V4",
+            "url": "https://docs.espressif.com/projects/esp-resource-keyf/en/release-v4.2/esp32/hw-reference/esp32/get-started-devkitc.html",
+            "category": "User manuel"
+        },
+        {
+            "resource-key": "Wroom-32",
+            "title": "Datasheet ESP32-wroom-32",
+            "url": "https://www.espressif.com/sites/default/files/documentation/esp32-wroom-32_datasheet_en.pdf",
+            "category": "Datasheet"
+        },
+        {
+            "resource-key": "Arduino-doc",
+            "title": "Documentations Arduino",
+            "url": "https://docs.arduino.cc/",
+            "category": "User manuel"
+        },
+        {
+            "resource-key": "ACHS-712x",
+            "title": "Capteur de courant",
+            "url": "https://www.pololu.com/file/0J1652/ACHS-712x-DS101_2018-02-28.pdf",
+            "category": "Datasheet"
+        },
+        {
+            "resource-key": "DHT11",
+            "title": "Sonde de température",
+            "url": "https://www.mouser.com/datasheet/2/758/DHT11-Technical-Data-Sheet-Translated-Version-1143054.pdf?srsltresource-key=AfmBOopEl_sNTsczD_SHb7sHJsDH9mJUSpXp-jLzwr9AlFVB7T20mSis",
+            "category": "Datasheet"
+        },
+        {
+            "resource-key": "Arduino-resource-keyE",
+            "title": "Arduino resource-keyE",
+            "url": "https://www.arduino.cc/en/software",
+            "category": "User manuel"
+        },
+        {
+            "resource-key": "ChatGPT",
+            "title": "ChatGPT",
+            "url": "https://chatgpt.com/",
+            "category": "Online help"
+        },
+        {
+            "resource-key": "NateLeGOAT",
+            "title": "Nathan D.",
+            "url": "https://nathandionnet86.wixsite.com/univ-poitiers",
+            "category": "Inlife help"
+        },
+        {
+            "resource-key": "W3Schools",
+            "title": "W3 Schools",
+            "url": "https://www.w3schools.com/html/default.asp",
+            "category": "Online help"
+        },
+        {
+            "resource-key": "TutoWebAP",
+            "title": "Création Access Point",
+            "url": "https://randomnerdtutorials.com/esp32-access-point-ap-web-server/?utm_source=chatgpt.com",
+            "category": "TUTO"
+        },
+        {
+            "resource-key": "",
+            "title": "Web Server utilisant Server-Sent Events",
+            "url": "https://randomnerdtutorials.com/esp32-web-server-sent-events-sse/?utm_source=chatgpt.com",
+            "category": "TUTO"
+        },
+        {
+            "resource-key": "",
+            "title": "",
+            "url": "",
+            "category": ""
+        }
+    ]
+}

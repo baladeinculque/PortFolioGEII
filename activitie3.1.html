@@ -1,0 +1,299 @@
+<!DOCTYPE html>                                 
+<html lang="fr-FR">
+<meta charset="UTF-8">
+
+<head>
+    <title>CR - Events Scraper</title>
+    <link rel="shortcut icon" href="assets/icons/icon_web-scraper.png" />
+    <link href="style.css" rel="stylesheet">
+</head>
+
+<body class="home">
+
+<!--section class="retour"-->
+    <a class="nav retour" href="index.html#sae_area">Revenir sur la page des Projets</a>
+</section>
+
+<div class="zone title">
+    <h1>Feuille de présence</h1>
+</div>
+
+<div class="zone">
+    <h2>Objectif :</h2><p class="p">Réaliser un programme qui créer un planning hebdomadaire permettant de justifier une activité de 35h.</p>
+    
+    <h2>Description :</h2><p class="p">
+        Il s'agit là d'une activité personnelle non demandée dans le cadre du BUT. Étant en contrat de professionnalisation, il m'est demandé de réaliser une feuille
+        hebdomadaire permettant de justifier 35h. Etant une activité qui se repète toutes les semaines de présence en IUT, je souhaite automatiser au maximum cette manipulation.
+    </p>
+
+    <table class="taches">
+    <tr>
+        <th><b>Tâches réalisées</b></th><th><b>Ressources utilisées</b></th><th><b>Traces</b></th><th><b>Autoévaluation</b></th>
+    </tr>
+    <tr>
+        <td>
+            <p class="p"><b>Analyser la source et le format du planning</b></p>
+            <p class="p">=> <b>objectif </b>Trouver par quel moyen récupérer le planning</p>
+            <p class="p">=> <b>description </b>Le planning est visible sur une interface web de l'université, je constate [...] <a class="modal-header" onclick="showModal('description3_1_1')">Cliquez ici pour voir plus</a>
+                <div class="modal hidden modal-txt" id="description3_1_1">
+                    <div>
+                        <span id="x-button" class="close" onclick="closeModal('description3_1_1')">
+                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 32 32" fill="currentColor">
+                                <path d="M31.797 0.191c-0.264-0.256-0.686-0.25-0.942 0.015l-13.328 13.326c-0.598 0.581 0.342 1.543 0.942 0.942l13.328-13.326c0.27-0.262 0.27-0.695 0-0.957zM14.472 17.515c-0.264-0.256-0.686-0.25-0.942 0.015l-13.328 13.326c-0.613 0.595 0.34 1.562 0.942 0.942l13.328-13.326c0.27-0.262 0.27-0.695 0-0.957zM1.144 0.205c-0.584-0.587-1.544 0.336-0.942 0.942l30.654 30.651c0.613 0.625 1.563-0.325 0.942-0.942z"></path>
+                            </svg>
+                        </span>
+                    </div>
+                    <div class="modal-content">
+                        <p class="p">Le planning est visible sur une interface web de l'université, je constate qu'un lien est disponible pour afficher ce planning dans nos applications personnelles. Si on entre l'adresse du lien dans un navigateur, un fichier .ics se telecharge contenant tous les evenements disponiblent sur le calendrier.</p>
+                    </div>
+                </div>
+            </p>
+        </td>
+        <td>
+            <p class="modal-p"><a href="https://upplanning.appli.univ-poitiers.fr/direct/" target="_blank">UPplanning</a></p>
+        </td>
+        <td>
+            <img class="modal-header" src="assets/traces/trace3.1.1.png" width="100%" onclick="showModal('trace3_1_1')">
+            <div class="modal hidden modal-img" id="trace3_1_1">
+                <span id="x-button" class="close" onclick="closeModal('trace3_1_1')">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 32 32" fill="currentColor">
+                        <path d="M31.797 0.191c-0.264-0.256-0.686-0.25-0.942 0.015l-13.328 13.326c-0.598 0.581 0.342 1.543 0.942 0.942l13.328-13.326c0.27-0.262 0.27-0.695 0-0.957zM14.472 17.515c-0.264-0.256-0.686-0.25-0.942 0.015l-13.328 13.326c-0.613 0.595 0.34 1.562 0.942 0.942l13.328-13.326c0.27-0.262 0.27-0.695 0-0.957zM1.144 0.205c-0.584-0.587-1.544 0.336-0.942 0.942l30.654 30.651c0.613 0.625 1.563-0.325 0.942-0.942z"></path>
+                    </svg>
+                </span>
+                <img class="modal-center" src="assets/traces/trace3.1.1.png">
+            </div>
+        </td>
+        <td>
+            <span class="modal-header" onclick="showModal('autoEvaluation3_1_1')"><img src="assets/icons/autoeval_vert.png" width="100%"></span>
+            <div class="modal hidden modal-txt" id="autoEvaluation3_1_1">
+                <div>
+                    <span id="x-button" class="close" onclick="closeModal('autoEvaluation3_1_1')">
+                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 32 32" fill="currentColor">
+                            <path d="M31.797 0.191c-0.264-0.256-0.686-0.25-0.942 0.015l-13.328 13.326c-0.598 0.581 0.342 1.543 0.942 0.942l13.328-13.326c0.27-0.262 0.27-0.695 0-0.957zM14.472 17.515c-0.264-0.256-0.686-0.25-0.942 0.015l-13.328 13.326c-0.613 0.595 0.34 1.562 0.942 0.942l13.328-13.326c0.27-0.262 0.27-0.695 0-0.957zM1.144 0.205c-0.584-0.587-1.544 0.336-0.942 0.942l30.654 30.651c0.613 0.625 1.563-0.325 0.942-0.942z"></path>
+                        </svg>
+                    </span>
+                </div>
+                <div>
+                    <p>Mes impressions concernant l'autoévaluation ...</p>
+                </div>
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <p class="p"><b>Importer le contenu</b></p>
+            <p class="p">=> <b>objectif </b>Créer une variable contenant les évenements</p>
+            <p class="p">=> <b>description </b>Pour analyser et traiter les évenements du calendrier il faut etre capable de [...] <a class="modal-header" onclick="showModal('description3_1_2')">Cliquez ici pour voir plus</a>
+                <div class="modal hidden modal-txt" id="description3_1_2">
+                    <div>
+                        <span id="x-button" class="close" onclick="closeModal('description3_1_2')">
+                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 32 32" fill="currentColor">
+                                <path d="M31.797 0.191c-0.264-0.256-0.686-0.25-0.942 0.015l-13.328 13.326c-0.598 0.581 0.342 1.543 0.942 0.942l13.328-13.326c0.27-0.262 0.27-0.695 0-0.957zM14.472 17.515c-0.264-0.256-0.686-0.25-0.942 0.015l-13.328 13.326c-0.613 0.595 0.34 1.562 0.942 0.942l13.328-13.326c0.27-0.262 0.27-0.695 0-0.957zM1.144 0.205c-0.584-0.587-1.544 0.336-0.942 0.942l30.654 30.651c0.613 0.625 1.563-0.325 0.942-0.942z"></path>
+                            </svg>
+                        </span>
+                    </div>
+                    <div class="modal-content">
+                        <p class="p">Pour analyser et traiter les évenements du calendrier il faut etre capable de lire le fichier au format .ics</p>
+                    </div>
+                </div>
+            </p>
+        </td>
+        <td>
+            <p class="modal-p"><a href="https://code.visualstudio.com/download" target="_blank">Visual Studio Code</a></p>
+            <p class="modal-p"><a href="https://chatgpt.com/" target="_blank">ChatGPT</a></p>
+        </td>
+        <td>
+            <img class="modal-header" src="assets/traces/trace3.1.2.png" width="100%" onclick="showModal('trace3_1_2')">
+            <div class="modal hidden modal-img" id="trace3_1_2">
+                <span id="x-button" class="close" onclick="closeModal('trace3_1_2')">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 32 32" fill="currentColor">
+                        <path d="M31.797 0.191c-0.264-0.256-0.686-0.25-0.942 0.015l-13.328 13.326c-0.598 0.581 0.342 1.543 0.942 0.942l13.328-13.326c0.27-0.262 0.27-0.695 0-0.957zM14.472 17.515c-0.264-0.256-0.686-0.25-0.942 0.015l-13.328 13.326c-0.613 0.595 0.34 1.562 0.942 0.942l13.328-13.326c0.27-0.262 0.27-0.695 0-0.957zM1.144 0.205c-0.584-0.587-1.544 0.336-0.942 0.942l30.654 30.651c0.613 0.625 1.563-0.325 0.942-0.942z"></path>
+                    </svg>
+                </span>
+                <img class="modal-center" src="assets/traces/trace3.1.2.png">
+            </div>
+        </td>
+        <td>
+            <span class="modal-header" onclick="showModal('autoEvaluation3_1_1')"><img src="assets/icons/autoeval_vert.png" width="100%"></span>
+            <div class="modal hidden modal-txt" id="autoEvaluation3_1_1">
+                <div>
+                    <span id="x-button" class="close" onclick="closeModal('autoEvaluation3_1_1')">
+                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 32 32" fill="currentColor">
+                            <path d="M31.797 0.191c-0.264-0.256-0.686-0.25-0.942 0.015l-13.328 13.326c-0.598 0.581 0.342 1.543 0.942 0.942l13.328-13.326c0.27-0.262 0.27-0.695 0-0.957zM14.472 17.515c-0.264-0.256-0.686-0.25-0.942 0.015l-13.328 13.326c-0.613 0.595 0.34 1.562 0.942 0.942l13.328-13.326c0.27-0.262 0.27-0.695 0-0.957zM1.144 0.205c-0.584-0.587-1.544 0.336-0.942 0.942l30.654 30.651c0.613 0.625 1.563-0.325 0.942-0.942z"></path>
+                        </svg>
+                    </span>
+                </div>
+                <div>
+                    <p>Mes impressions concernant l'autoévaluation ...</p>
+                </div>
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <p class="p"><b>Modifier le contenu de chaque évenements</b></p>
+            <p class="p">=> <b>objectif </b>Rendre les données exploitables</p>
+            <p class="p">=> <b>description </b>Tous les évenements sont construit sur une base [...] <a class="modal-header" onclick="showModal('description3_1_3')">Cliquez ici pour voir plus</a>
+                <div class="modal hidden modal-txt" id="description3_1_3">
+                    <div>
+                        <span id="x-button" class="close" onclick="closeModal('description3_1_3')">
+                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 32 32" fill="currentColor">
+                                <path d="M31.797 0.191c-0.264-0.256-0.686-0.25-0.942 0.015l-13.328 13.326c-0.598 0.581 0.342 1.543 0.942 0.942l13.328-13.326c0.27-0.262 0.27-0.695 0-0.957zM14.472 17.515c-0.264-0.256-0.686-0.25-0.942 0.015l-13.328 13.326c-0.613 0.595 0.34 1.562 0.942 0.942l13.328-13.326c0.27-0.262 0.27-0.695 0-0.957zM1.144 0.205c-0.584-0.587-1.544 0.336-0.942 0.942l30.654 30.651c0.613 0.625 1.563-0.325 0.942-0.942z"></path>
+                            </svg>
+                        </span>
+                    </div>
+                    <div class="modal-content">
+                        <p class="p">Tous les évenements sont construit sur une base differente de laquelle je veux l'exploiter. Je creer donc une bibliotheque a partir du contenu. Chaque evenement commence par 'BEGIN:VEVENT' et termine par 'END:VEVENT'.</p>
+                    </div>
+                </div>
+            </p>
+        </td>
+        <td>
+            <p class="modal-p"><a href="https://code.visualstudio.com/download" target="_blank">Visual Studio Code</a></p>
+            <p class="modal-p"><a href="https://chatgpt.com/" target="_blank">ChatGPT</a></p>
+        </td>
+        <td>
+            <img class="modal-header" src="assets/traces/trace3.1.3.png" width="100%" onclick="showModal('trace3_1_3')">
+            <div class="modal hidden modal-img" id="trace3_1_3">
+                <span id="x-button" class="close" onclick="closeModal('trace3_1_3')">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 32 32" fill="currentColor">
+                        <path d="M31.797 0.191c-0.264-0.256-0.686-0.25-0.942 0.015l-13.328 13.326c-0.598 0.581 0.342 1.543 0.942 0.942l13.328-13.326c0.27-0.262 0.27-0.695 0-0.957zM14.472 17.515c-0.264-0.256-0.686-0.25-0.942 0.015l-13.328 13.326c-0.613 0.595 0.34 1.562 0.942 0.942l13.328-13.326c0.27-0.262 0.27-0.695 0-0.957zM1.144 0.205c-0.584-0.587-1.544 0.336-0.942 0.942l30.654 30.651c0.613 0.625 1.563-0.325 0.942-0.942z"></path>
+                    </svg>
+                </span>
+                <img class="modal-center" src="assets/traces/trace3.1.3.png">
+            </div>
+        </td>
+        <td>
+            <span class="modal-header" onclick="showModal('autoEvaluation3_1_3')"><img src="assets/icons/autoeval_vert.png" width="100%"></span>
+            <div class="modal hidden modal-txt" id="autoEvaluation3_1_3">
+                <div>
+                    <span id="x-button" class="close" onclick="closeModal('autoEvaluation3_1_3')">
+                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 32 32" fill="currentColor">
+                            <path d="M31.797 0.191c-0.264-0.256-0.686-0.25-0.942 0.015l-13.328 13.326c-0.598 0.581 0.342 1.543 0.942 0.942l13.328-13.326c0.27-0.262 0.27-0.695 0-0.957zM14.472 17.515c-0.264-0.256-0.686-0.25-0.942 0.015l-13.328 13.326c-0.613 0.595 0.34 1.562 0.942 0.942l13.328-13.326c0.27-0.262 0.27-0.695 0-0.957zM1.144 0.205c-0.584-0.587-1.544 0.336-0.942 0.942l30.654 30.651c0.613 0.625 1.563-0.325 0.942-0.942z"></path>
+                        </svg>
+                    </span>
+                </div>
+                <div>
+                    <p>Mes impressions concernant l'autoévaluation ...</p>
+                </div>
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <p class="p"><b>Modificatien du fuseau horaire</b></p>
+            <p class="p">=> <b>objectif </b>Remettre l'heure en UTC +2.</p>
+            <p class="p">=> <b>description </b> [...] <a class="modal-header" onclick="showModal('description3_1_4')">Cliquez ici pour voir plus</a>
+                <div class="modal hidden modal-txt" id="description3_1_4">
+                    <div>
+                        <span id="x-button" class="close" onclick="closeModal('description3_1_4')">
+                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 32 32" fill="currentColor">
+                                <path d="M31.797 0.191c-0.264-0.256-0.686-0.25-0.942 0.015l-13.328 13.326c-0.598 0.581 0.342 1.543 0.942 0.942l13.328-13.326c0.27-0.262 0.27-0.695 0-0.957zM14.472 17.515c-0.264-0.256-0.686-0.25-0.942 0.015l-13.328 13.326c-0.613 0.595 0.34 1.562 0.942 0.942l13.328-13.326c0.27-0.262 0.27-0.695 0-0.957zM1.144 0.205c-0.584-0.587-1.544 0.336-0.942 0.942l30.654 30.651c0.613 0.625 1.563-0.325 0.942-0.942z"></path>
+                            </svg>
+                        </span>
+                    </div>
+                    <div class="modal-content">
+                        <p class="p">XXX</p>
+                    </div>
+                </div>
+            </p>
+        </td>
+        <td>
+            <p class="modal-p"><a href="https://code.visualstudio.com/download" target="_blank">Visual Studio Code</a></p>
+            <p class="modal-p"><a href="https://chatgpt.com/" target="_blank">ChatGPT</a></p>
+        </td>
+        <td>
+            <img class="modal-header" src="assets/traces/trace3.1.4.png" width="100%" onclick="showModal('trace3_1_4')">
+            <div class="modal hidden modal-img" id="trace3_1_4">
+                <span id="x-button" class="close" onclick="closeModal('trace3_1_4')">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 32 32" fill="currentColor">
+                        <path d="M31.797 0.191c-0.264-0.256-0.686-0.25-0.942 0.015l-13.328 13.326c-0.598 0.581 0.342 1.543 0.942 0.942l13.328-13.326c0.27-0.262 0.27-0.695 0-0.957zM14.472 17.515c-0.264-0.256-0.686-0.25-0.942 0.015l-13.328 13.326c-0.613 0.595 0.34 1.562 0.942 0.942l13.328-13.326c0.27-0.262 0.27-0.695 0-0.957zM1.144 0.205c-0.584-0.587-1.544 0.336-0.942 0.942l30.654 30.651c0.613 0.625 1.563-0.325 0.942-0.942z"></path>
+                    </svg>
+                </span>
+                <img class="modal-center" src="assets/traces/trace3.1.4.png">
+            </div>
+        </td>
+        <td>
+            <span class="modal-header" onclick="showModal('autoEvaluation3_1_4')"><img src="assets/icons/autoeval_vert.png" width="100%"></span>
+            <div class="modal hidden modal-txt" id="autoEvaluation3_1_4">
+                <div>
+                    <span id="x-button" class="close" onclick="closeModal('autoEvaluation3_1_4')">
+                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 32 32" fill="currentColor">
+                            <path d="M31.797 0.191c-0.264-0.256-0.686-0.25-0.942 0.015l-13.328 13.326c-0.598 0.581 0.342 1.543 0.942 0.942l13.328-13.326c0.27-0.262 0.27-0.695 0-0.957zM14.472 17.515c-0.264-0.256-0.686-0.25-0.942 0.015l-13.328 13.326c-0.613 0.595 0.34 1.562 0.942 0.942l13.328-13.326c0.27-0.262 0.27-0.695 0-0.957zM1.144 0.205c-0.584-0.587-1.544 0.336-0.942 0.942l30.654 30.651c0.613 0.625 1.563-0.325 0.942-0.942z"></path>
+                        </svg>
+                    </span>
+                </div>
+                <div>
+                    <p>Mes impressions concernant l'autoévaluation ...</p>
+                </div>
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <p class="p"><b>XXX</b></p>
+            <p class="p">=> <b>objectif </b>XXX.</p>
+            <p class="p">=> <b>description </b> [...] <a class="modal-header" onclick="showModal('description3_1_x')">Cliquez ici pour voir plus</a>
+                <div class="modal hidden modal-txt" id="description3_1_x">
+                    <div>
+                        <span id="x-button" class="close" onclick="closeModal('description3_1_x')">
+                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 32 32" fill="currentColor">
+                                <path d="M31.797 0.191c-0.264-0.256-0.686-0.25-0.942 0.015l-13.328 13.326c-0.598 0.581 0.342 1.543 0.942 0.942l13.328-13.326c0.27-0.262 0.27-0.695 0-0.957zM14.472 17.515c-0.264-0.256-0.686-0.25-0.942 0.015l-13.328 13.326c-0.613 0.595 0.34 1.562 0.942 0.942l13.328-13.326c0.27-0.262 0.27-0.695 0-0.957zM1.144 0.205c-0.584-0.587-1.544 0.336-0.942 0.942l30.654 30.651c0.613 0.625 1.563-0.325 0.942-0.942z"></path>
+                            </svg>
+                        </span>
+                    </div>
+                    <div class="modal-content">
+                        <p class="p">XXX</p>
+                    </div>
+                </div>
+            </p>
+        </td>
+        <td>
+            <p class="modal-p"><a href="https://code.visualstudio.com/download" target="_blank">Visual Studio Code</a></p>
+            <p class="modal-p"><a href="https://chatgpt.com/" target="_blank">ChatGPT</a></p>
+        </td>
+        <td>
+            <img class="modal-header" src="assets/traces/trace3.1.x.png" width="100%" onclick="showModal('trace3_1_x')">
+            <div class="modal hidden modal-img" id="trace3_1_x">
+                <span id="x-button" class="close" onclick="closeModal('trace3_1_x')">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 32 32" fill="currentColor">
+                        <path d="M31.797 0.191c-0.264-0.256-0.686-0.25-0.942 0.015l-13.328 13.326c-0.598 0.581 0.342 1.543 0.942 0.942l13.328-13.326c0.27-0.262 0.27-0.695 0-0.957zM14.472 17.515c-0.264-0.256-0.686-0.25-0.942 0.015l-13.328 13.326c-0.613 0.595 0.34 1.562 0.942 0.942l13.328-13.326c0.27-0.262 0.27-0.695 0-0.957zM1.144 0.205c-0.584-0.587-1.544 0.336-0.942 0.942l30.654 30.651c0.613 0.625 1.563-0.325 0.942-0.942z"></path>
+                    </svg>
+                </span>
+                <img class="modal-center" src="assets/traces/trace3.1.x.png">
+            </div>
+        </td>
+        <td>
+            <span class="modal-header" onclick="showModal('autoEvaluation3_1_x')"><img src="assets/icons/autoeval_vert.png" width="100%"></span>
+            <div class="modal hidden modal-txt" id="autoEvaluation3_1_x">
+                <div>
+                    <span id="x-button" class="close" onclick="closeModal('autoEvaluation3_1_x')">
+                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 32 32" fill="currentColor">
+                            <path d="M31.797 0.191c-0.264-0.256-0.686-0.25-0.942 0.015l-13.328 13.326c-0.598 0.581 0.342 1.543 0.942 0.942l13.328-13.326c0.27-0.262 0.27-0.695 0-0.957zM14.472 17.515c-0.264-0.256-0.686-0.25-0.942 0.015l-13.328 13.326c-0.613 0.595 0.34 1.562 0.942 0.942l13.328-13.326c0.27-0.262 0.27-0.695 0-0.957zM1.144 0.205c-0.584-0.587-1.544 0.336-0.942 0.942l30.654 30.651c0.613 0.625 1.563-0.325 0.942-0.942z"></path>
+                        </svg>
+                    </span>
+                </div>
+                <div>
+                    <p>Mes impressions concernant l'autoévaluation ...</p>
+                </div>
+            </div>
+        </td>
+    </tr>
+    </table>
+    <h2>ANALYSE REFLEXIVE :</h2>
+    <p class="p">réflexions sur les traces conservées, sur les raisons qui justifient leur choix, sur les apprentissages qu’elles démontrent, sur la construction de connaissances qu’elles révèlent, sur les liens entre théorie et pratique, sur les apprentissages à réaliser…Vous décrivez ce que vous avez appris depuis le début de la SAE et ce qu’il vous reste à apprendre. Vous portez un jugement global sur votre progression (degré de satisfaction, perception). Comment ai-je appris ? Qu’ai-je réussi à accomplir ? Ai-je rencontré des difficultés ? Quels savoirs ai-je acquis ? Quels savoirs ai-je démontrés ? À quelles compétences visées par le programme du BUT ces savoirs se rattachent-ils ? Quelles connaissances, habiletés, attitudes … aurais-je dû mobiliser pour mieux faire face aux situations rencontrées ? Que dois-je apprendre pour continuer à développer mes compétences ?? Comment vais-je m’y prendre pour accomplir ces apprentissages ?</p>
+</div>
+
+<section class="section footer" id="footer_area" style="bottom: 0px; width: 100%;">
+    <div id="footerContainer"></div>
+    <!--iframe id="footerFrame" src="footer.html" style="border:none;width:100%;height:365px;"></iframe-->
+</section>
+
+<button class="scroll-top">
+    <a href="#"><img src="assets/icons/scroll_to_top_white_icon2.png" width="30px"></a>
+</button>
+
+<script src="script.js"></script>
+
+</body>
+</html>

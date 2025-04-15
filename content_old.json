@@ -1,0 +1,200 @@
+{
+    "Nav_Button_Home":{
+        "fr": "Accueil",
+        "en": "Home page"
+    },
+    "Nav_Button_Context":{
+        "fr": "Contexte",
+        "en": "Context"
+    },
+    "Nav_Button_Aboutme":{
+        "fr": "A propos de moi",
+        "en": "About me"
+    },
+    "Nav_Button_Activities":{
+        "fr": "Activités",
+        "en": "Activities"
+    },
+    "Main_title":{
+        "fr": "Mon PortFolio",
+        "en": "My PortFolio"
+    },
+    "Main_BUT":{
+        "fr": "Génie Électrique et Informatique Industrielle",
+        "en": "Electrical Engineering and Industrial Computing"
+    },
+    "Main_ESE":{
+        "fr": "Électronique et Systèmes Embarqués",
+        "en": "Electronics and Embedded Systems"
+    },
+    "Main_description":{
+        "fr": "Portfolio d'un étudiant",
+        "en": "Student portfolio"
+    },
+    "Context_title":{
+        "fr": "Contexte",
+        "en": "Context"
+    },
+    "Context_content":{
+        "fr": "La SAé (Situation d’Apprentissage et d’évaluation) est un moyen d'évaluer la réalisation et la compréhension d'une tâche donnée. Dans le cadre du Bachelor Universitaire de Technologie ce Portfolio est une des activités évaluées issue de la première année mais ayant intégré le Bachelor en seconde année, cette activité en devient donc ma première. Le BUT GEII forme des spécialistes de l'électricité, de l'électronique et de l'informatique industrielle capables de concevoir, installer, programmer et maintenir des systèmes électroniques et/ou automatisés. Ce portfolio fera référence à des activités d'électronique et systèmes embarqués car il s'agit de l'option que j'ai choisie.",
+        "en": "The SAé (French acronym for Learning and Evaluation Situation) is a means of evaluating the achievement and understanding of a given task. As part of the University Bachelor of Technology, this Portfolio is one of the activities evaluated from the first year but having integrated the Bachelor in the second year, this activity therefore becomes my first. The BUT GEII trains specialists in electricity, electronics and industrial computing capable of designing, installing, programming and maintaining electronic and/or automated systems. This portfolio will refer to electronics and embedded systems activities because this is the option I chose."
+    },
+    "Context_Button_Skills_Label":{
+        "fr": "Référentiel des compétences du BUT GEII Électronique et Systèmes Embarqués",
+        "en": "Bachelor degree's skills repository (French version)"
+    },
+    "Context_ending":{
+        "fr": "Je réalise ce Bachelor en alternance entre l'IUT d'Angoulème (16) et l'entreprise Sercel à Carquefou (44).",
+        "en": "I am doing this Bachelor alternating between the IUT of Angoulème (16) and the Sercel company in Carquefou (44)."
+    },
+    "Aboutme_title":{
+        "fr": "À propos de moi",
+        "en": "About me"
+    },
+    "Aboutme_content":{
+        "fr": "Je m'appelle Cédric ROUILLÉ, j'ai 39 ans, et je suis ravi de partager un peu plus de moi avec vous aujourd'hui. Pendant un peu plus de dix ans de ma vie professionnelle, j'ai consacré mon temps et mon énergie à l'industrie de la restauration. C'était une période enrichissante où j'ai développé des compétences essentielles telles que la gestion du temps, l'anticipation des besoins, le travail d'équipe et la gestion du stress dans un environnement dynamique. Cependant, avec le temps, les envies et les besoins évoluent. J'ai donc, dans un premier temps, travaillé en intérim en tant que préparateur de commande avant d'entreprendre une reconversion professionnelle. Cela a été une décision mure de réflexion, mais je crois profondément en l'importance de suivre ses passions et de se développer constamment. J'ai d'abord suivi des formations pour adulte en accélérée comme le bac pro SN RISC et le BTS SNEC avant de travailler pendant 18 mois en intérim dans l’informatique d’abord puis électronique par la suite. J'ai pu par cette première expérience mettre en application les compétences acquises au fil des années et confirmer mes choix de réorientation mais qui a également relevé les lacunes des formations accélérées. Suite à la réforme des IUT et ma persévérance à continuer mes études, je suis maintenant engagé dans un BUT GEII Electronique et Systèmes Embarqués. Je poursuis cette formation en alternance au poste de validation de test dans une entreprise qui conçoit et produit des systèmes ayant pour but de réaliser de la cartographie sous terraine. Historiquement nos clients prospectent les sources de pétrole et de gaz mais Sercel se développe désormais dans le domaine du monitoring et de la transition énergétique qui sont des valeurs que je chéries bien plus que les énergies fossiles. En effet, mes principaux objectifs sont de participer au développement d'outils interconnectés, d'optimiser les consommations énergétiques, prendre part à la réalisation et la maintenance de produits de communication électronique, élaborer et proposer des éléments matériels et logiciels en vue d'améliorer un produit. Cette transition est passionnante et riche d'informations qui me poussent à apprendre continuellement dans un environnement totalement décalé du milieu dans lequel j'ai évolué toute ma carrière professionnelle. Je suis convaincu que chaque expérience, qu'elle soit dans la restauration, la logistique ou l'électronique, ou encore même dans un domaine plus privé, a contribuée à façonner ma personnalité et à me doter d'une perspective unique. Je suis ouvert aux opportunités, aux collaborations et aux défis stimulants qui me permettront de grandir professionnellement et personnellement.",
+        "en": "My name is Cédric ROUILLÉ, I'm 39 years old, and I'm delighted to share a little more about myself with you today. For a little over ten years of my professional life, I have devoted my time and energy to the restaurant industry. It was a rewarding time where I developed essential skills such as time management, anticipating needs, teamwork and stress management in a dynamic environment. However, over time, desires and needs evolve. So, I initially worked on a temporary basis as an order preparer before undertaking a career change. It was a decision that was carefully considered, but I deeply believe in the importance of following your passions and constantly developing yourself. I first followed accelerated adult training courses such as the SN RISC professional baccalaureate and the SNEC BTS before working for 18 months as a temporary worker in IT first and then electronics later.Through this first experience, I was able to apply the skills acquired over the years and confirm my reorientation choices but which also highlighted the shortcomings of accelerated training. Following the IUT reform and my perseverance in continuing my studies, I am now engaged in a BUT GEII Electronics and Embedded Systems. I am continuing this work-study training in a test validation position in a company which designs and produces systems aimed at carrying out underground mapping. Historically our clients prospect for oil and gas sources but Sercel is now developing in the field of monitoring and energy transition which are values ​​that I cherish much more than fossil fuels. Indeed, my main objectives are to participate in the development of interconnected tools, to optimize energy consumption, to take part in the creation and maintenance of electronic communication products, to develop and offer hardware and software elements with a view to improving a product. This transition is exciting and rich in information that pushes me to continually learn in an environment completely different from the environment in which I have evolved throughout my professional career. I am convinced that each experience, whether in catering, logistics or electronics, or even in a more private field, has contributed to shaping my personality and giving me a unique perspective. I am open to opportunities, collaborations and stimulating challenges that will allow me to grow professionally and personally."
+    },
+    "Aboutme_ResumeLink_Label":{
+        "fr": "Télécharger le CV",
+        "en": "Download Resumé"
+    },
+    "Activities_Year_title1":{
+        "fr": "Projets de l'année 2023/2024",
+        "en": "Projects of the year 2023/2024"
+    },
+    "Activities_Year_title2":{
+        "fr": "Projets de l'année 2024/2025",
+        "en": "Projects of the year 2024/2025"
+    },
+    "Activities_title1":{
+        "fr": "Première Activité : Réalisation d'un Portfolio",
+        "en": "First Activity : Portfolio realization"
+    },
+    "Activities_title2":{
+        "fr": "Seconde Activité : ",
+        "en": "Second Activity : "
+    },
+    "Activities_title3":{
+        "fr": "Troisième Activité : ",
+        "en": ""
+    },
+    "Activities_title4":{
+        "fr": "Quatrième Activité : ",
+        "en": ""
+    },
+    "Activity1_":{
+        "fr": "",
+        "en": ""
+    },
+    "Activity2_":{
+        "fr": "Stylo Voltmètre",
+        "en": "Voltmeter pen"
+    },
+    "Activity3.1_":{
+        "fr_activity_name": "",
+        "en_activity_name": "Event Scraper",
+        "fr_activity_goal": "Réaliser un programme qui créer un planning hebdomadaire permettant de justifier une activité de 35h.",
+        "en_activity_goal": "",
+        "fr_description": "Il s'agit là d'une activité personnelle non demandée dans le cadre du BUT. Étant en contrat de professionnalisation, il m'est demandé de réaliser une feuille hebdomadaire permettant de justifier 35h. Etant une activité qui se repète toutes les semaines de présence en IUT, je souhaite automatiser au maximum cette manipulation.",
+        "en_description": "",
+        "line_1":{
+            "fr_task_name":"Analyser la source et le format du planning",
+            "en_task_name":"",
+            "fr_task_goal":"Trouver par quel moyen récupérer le planning",
+            "en_task_goal":"",
+            "fr_task_descritption":"Le planning est visible sur une interface web de l'université, je constate qu'un lien est disponible pour afficher ce planning dans nos applications personnelles. Si on entre l'adresse du lien dans un navigateur, un fichier .ics se telecharge contenant tous les evenements disponiblent sur le calendrier.",
+            "en_task_descritption":"",
+            "resource":["UPplanning","ChatGPT"],
+            "fr_trace": "trace3.1.1.png",
+            "en_trace": "trace3.1.1.png",
+            "fr_self-assessment_icon": "autoeval_vert_fr.png",
+            "en_self-assessment_icon": "autoeval_vert_en.png",
+            "fr_self-assessment_description": "",
+            "en_self-assessment_description": ""
+        },
+        "line_2":{
+            "fr_task_name":"Importer le contenu",
+            "en_task_name":"",
+            "fr_task_goal":"Créer une fonction recupérant l'ensemble des évenements", 
+            "en_task_goal":"",
+            "fr_task_descritption":"Pour analyser et traiter les évenements du calendrier il faut etre capable de lire le fichier au format .ics et de l'enregistrer dans une variable, ici : contenu, a partir de l'url de partage du calendrier",
+            "en_task_descritption":"",
+            "resource":["UPplanning","ChatGPT"],
+            "fr_trace": "trace3.1.2.png",
+            "en_trace": "trace3.1.2.png",
+            "fr_self-assessment_icon": "autoeval_vert_fr.png",
+            "en_self-assessment_icon": "autoeval_vert_en.png",
+            "fr_self-assessment_description": "",
+            "en_self-assessment_description": ""
+        },
+        "line_3":{
+            "fr_task_name":"Modifier le contenu de chaque évenements",
+            "en_task_name":"",
+            "fr_task_goal":"Tous les évenements sont construit sur une base differente de laquelle je veux l'exploiter. Je creer donc une bibliotheque a partir du contenu. Chaque evenement commence par 'BEGIN:VEVENT' et termine par 'END:VEVENT'",
+            "en_task_goal":"",
+            "fr_task_descritption":"",
+            "en_task_descritption":"",
+            "resource":["UPplanning","ChatGPT"],
+            "fr_trace": "trace3.1.3.png",
+            "en_trace": "trace3.1.3.png",
+            "fr_self-assessment_icon": "autoeval_vert_fr.png",
+            "en_self-assessment_icon": "autoeval_vert_en.png",
+            "fr_self-assessment_description": "",
+            "en_self-assessment_description": ""
+        },
+        "line_4":{
+            "fr_task_name":"",
+            "en_task_name":"",
+            "fr_task_goal":"",
+            "en_task_goal":"",
+            "fr_task_descritption":"",
+            "en_task_descritption":"",
+            "resource":["UPplanning","ChatGPT"],
+            "fr_trace": "trace3.1.4.png",
+            "en_trace": "trace3.1.4.png",
+            "fr_self-assessment_icon": "autoeval_vert_fr.png",
+            "en_self-assessment_icon": "autoeval_vert_en.png",
+            "fr_self-assessment_description": "",
+            "en_self-assessment_description": ""
+        },
+        "line_5":{
+            "fr_task_name":"",
+            "en_task_name":"",
+            "fr_task_goal":"",
+            "en_task_goal":"",
+            "fr_task_descritption":"",
+            "en_task_descritption":"",
+            "resource":["UPplanning","ChatGPT"],
+            "fr_trace": "trace3.1.5.png",
+            "en_trace": "trace3.1.5.png",
+            "fr_self-assessment_icon": "autoeval_vert_fr.png",
+            "en_self-assessment_icon": "autoeval_vert_en.png",
+            "fr_self-assessment_description": "",
+            "en_self-assessment_description": ""
+        }
+    },
+    "Activity3.2_":{
+        "fr_activity_name": "SAé - Mesure de consommation",
+        "en_activity_name": "SAé - Energy consumption",
+        "fr_activity_goal": "Réaliser un démonstrateur de compétences autour de l’ESP32. Le projet réalisé peut ne pas avoir de rapport avec le système de chronométrage évolutif mais la fonction développée dans ce projet doit pouvoir être réutilisée dans le système de chronométrage évolutif. N’ayant personne sur ce système, la fonction développée doit être validée par M. Lucas.",
+        "en_activity_goal": "",
+        "fr_description": "Créer un module qui mesure la consommation sur plusieurs sorties 12VDC et plusieurs capteurs de température, les stocker dans un fichier et être en mesure de les consulter depuis un appareil extérieur.",
+        "en_description": "",
+        "line_1":{
+            "fr_task_name":"",
+            "en_task_name":"",
+            "fr_task_goal":"",
+            "en_task_goal":"",
+            "fr_task_descritption":"",
+            "en_task_descritption":"",
+            "resource":["UPplanning","ChatGPT"],
+            "fr_trace": "trace3.1.1.png",
+            "en_trace": "trace3.1.1.png",
+            "fr_self-assessment_icon": "autoeval_vert_fr.png",
+            "en_self-assessment_icon": "autoeval_vert_en.png",
+            "fr_self-assessment_description": "",
+            "en_self-assessment_description": ""
+        }
+    }
+}

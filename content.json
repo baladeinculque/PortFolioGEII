@@ -1,0 +1,159 @@
+{
+  "Home-name": {
+    "fr": "ACCUEIL",
+    "en": "HOME"
+  },
+  "Context-name": {
+    "fr": "CONTEXTE",
+    "en": "CONTEXT"
+  },
+  "Aboutme-name": {
+    "fr": "À PROPOS DE MOI",
+    "en": "ABOUT ME"
+  },
+  "Activities-name": {
+    "fr": "PROJETS",
+    "en": "PROJECTS"
+  },
+  "Contact-name": {
+    "fr": "CONTACT",
+    "en": "CONTACT"
+  },
+  "Main-title": {
+    "fr": "Mon PortFolio",
+    "en": "My PortFolio"
+  },
+  "Main-substitle-0": {
+    "fr": "Étudiant en 3ème année",
+    "en": "Third year student"
+  },
+  "Main-substitle-1": {
+    "fr": "BUT Génie Électrique et Informatique Industrielle",
+    "en": "BUT Electrical Engineering and Industrial Computing"
+  },
+  "Main-substitle-2": {
+    "fr": "Électronique et Systèmes Embarqués",
+    "en": "Electronics and Embedded Systems"
+  },
+  "Skill1-name": {
+    "fr": "Concevoir",
+    "en": "Design"
+  },
+  "Skill1-content": {
+    "fr": "La compétence 'Concevoir' consiste à élaborer des solutions techniques adaptées aux besoins industriels en électricité, électronique et informatique. Elle englobe l'analyse des spécifications, la modélisation de systèmes, le choix des composants et le développement de prototypes. Cette compétence est essentielle pour innover et optimiser les performances des systèmes automatisés et communicants.",
+    "en": "The 'Design' skill involves developing technical solutions tailored to industrial needs in the electrical, electronic, and IT sectors. It encompasses specification analysis, system modeling, component selection, and prototype development. This skill is essential for innovating and optimizing the performance of automated and communicating systems."
+  },
+  "Skill2-name": {
+    "fr": "Vérifier",
+    "en": "Verify"
+  },
+  "Skill2-content": {
+    "fr": "La compétence 'Vérifier' consiste à s'assurer du bon fonctionnement d’un système, d’un circuit ou d’un programme en appliquant des méthodes de test et de validation rigoureuses. Elle implique la mise en œuvre d’outils de mesure, l’analyse des résultats et la comparaison avec les spécifications attendues. Cette compétence est essentielle pour garantir la fiabilité et la conformité des équipements électriques et informatiques industriels.",
+    "en": "The 'Verify' skill involves ensuring the proper functioning of a system, circuit, or program by applying rigorous testing and validation methods. It involves implementing measurement tools, analyzing results, and comparing them with expected specifications. This skill is essential for ensuring the reliability and compliance of industrial electrical and IT equipment."
+  },
+  "Skill3-name": {
+    "fr": "Maintenir",
+    "en": "Maintain"
+  },
+  "Skill3-content": {
+    "fr": "La compétence 'Maintenir' consiste à assurer la pérennité et le bon fonctionnement des systèmes électriques, électroniques et informatiques industriels. Elle englobe le diagnostic des pannes, la mise en œuvre d’actions correctives et préventives, ainsi que l’optimisation des équipements pour garantir leur performance et leur fiabilité. Cette compétence est essentielle pour assurer la disponibilité et la durabilité des installations techniques.",
+    "en": "The 'Maintain' skill involves ensuring the durability and proper functioning of industrial electrical, electronic, and IT systems. It includes troubleshooting, implementing corrective and preventive actions, and optimizing equipment to ensure its performance and reliability. This skill is essential for ensuring the availability and sustainability of technical installations."
+  },
+  "Skill4-name": {
+    "fr": "Implanter",
+    "en": "Implement"
+  },
+  "Skill4-content": {
+    "fr": "La compétence 'Implanter' consiste à intégrer et configurer des solutions matérielles et logicielles dans un environnement industriel. Elle implique la mise en place d’équipements électriques, électroniques et informatiques, en respectant les contraintes techniques et les normes en vigueur. Cette compétence est essentielle pour assurer l’adaptabilité et l’efficacité des systèmes au sein des infrastructures industrielles.",
+    "en": "The 'Implant' skill involves integrating and configuring hardware and software solutions in an industrial environment. It involves installing electrical, electronic, and IT equipment while respecting technical constraints and current standards. This skill is essential for ensuring the adaptability and efficiency of systems within industrial infrastructures."
+  },
+  "Context-conten-l1": {
+    "fr": "La SAé (Situation d’Apprentissage et d’évaluation) est un moyen d'évaluer la réalisation et la compréhension d'une tâche donnée.",
+    "en": "The SAé (Learning and Assessment Situation) is a way to evaluate the completion and understanding of a given task."
+  },
+  "Context-conten-l2": {
+    "fr": "Dans le cadre du Bachelor Universitaire de Technologie, ce portfolio est une des activités évaluées issue de la première année, mais ayant intégré le Bachelor en seconde année, cette activité en devient donc ma première.",
+    "en": "As part of the Bachelor's degree in technology, this portfolio is one of the evaluated activities from the first year, but since I joined the Bachelor’s program in the second year, this activity becomes my first."
+  },
+  "Context-conten-l3": {
+    "fr": "Le BUT GEII forme des spécialistes de l'électricité, de l'électronique et de l'informatique industrielle capables de concevoir, installer, programmer et maintenir des systèmes électroniques et/ou automatisés.",
+    "en": "The BUT GEII trains specialists in electricity, electronics, and industrial computing capable of designing, installing, programming, and maintaining electronic and/or automated systems."
+  },
+  "Context-conten-l4": {
+    "fr": "Ce portfolio fera référence à des activités d'électronique et systèmes embarqués car il s'agit de l'option que j'ai choisie.",
+    "en": "This portfolio will refer to activities in electronics and embedded systems because this is the option I have chosen."
+  },
+  "Competences": {
+    "fr": "Référentiel des compétences du BUT GEII Électronique et Systèmes Embarqués",
+    "en": "BUT GEII Electronics and Embedded Systems Competency Framework (Only available in french)"
+  },
+  "Context-conten-l5": {
+    "fr": "Je réalise ce Bachelor en alternance entre l'IUT d'Angoulême (16) et l'entreprise Sercel à Carquefou (44).",
+    "en": "I am completing this Bachelor’s degree in a work-study program between the IUT of Angoulême (16) and the company Sercel in Carquefou (44)."
+  },
+  "CV": {
+    "fr": "Afficher le CV",
+    "en": "View Resume"
+  },
+  "Aboutme-content": {
+  "fr": "Bonjour à tous,\nJe m'appelle Cédric ROUILLÉ, j'ai 39 ans, et voici ma presentation personnelle.\nPendant une dizaine d'années, j'ai consacré mon temps et mon énergie à l'industrie de la restauration.\nC'était une période enrichissante où j'ai développé des compétences essentielles telles que la gestion du temps, l'anticipation des besoins, le travail d'équipe et la gestion du stress dans un environnement dynamique.\nCependant, avec le temps, les envies et les besoins évoluent. J'ai donc, dans un premier temps, travaillé en intérim en tant que préparateur de commandes avant d'entreprendre une reconversion professionnelle. Cela a été une décision mûrement réfléchie, mais je crois profondément en l'importance de suivre ses passions et de se développer constamment.\nJ'ai suivi des formations accélérées pour adultes, comme le bac pro Système Numérique RISC (Réseaux Informatique et Systèmes Communicants) et le BTS SNEC (Système Numérique Electronique et Communication), avant de travailler pendant 18 mois en intérim, d'abord dans l’informatique, puis dans l’électronique. Cette première expérience m'a permis de mettre en application les compétences acquises au fil des années et de confirmer mes choix de réorientation. Cependant, elle a aussi mis en évidence certaines lacunes des formations accélérées.\nGrâce à ma persévérance et à la réforme des IUT, je suis maintenant engagé dans un BUT GEII Électronique et Systèmes Embarqués.\nJe poursuis cette formation en alternance au poste de validation de test dans une entreprise qui conçoit et produit des systèmes destinés à la cartographie souterraine. Historiquement, nos clients prospectaient les sources de pétrole et de gaz, mais Sercel se développe désormais dans le domaine du monitoring et de la transition énergétique. Ce sont des valeurs que je chéris bien plus que les énergies fossiles.\nMes principaux objectifs sont de participer au développement d'outils interconnectés, d'optimiser les consommations énergétiques, de contribuer à la réalisation et à la maintenance de produits de communication électronique, ainsi que d'élaborer et de proposer des solutions matérielles et logicielles pour améliorer un produit.\nCette transition est passionnante et riche d'enseignements. Elle me pousse à apprendre continuellement dans un environnement totalement différent de celui dans lequel j'ai évolué toute ma carrière professionnelle.\nJe suis convaincu que chaque expérience, qu'elle soit dans la restauration, la logistique, l'électronique ou même dans un domaine plus personnel, a contribué à façonner ma personnalité et à me donner une perspective unique.\nJe suis ouvert aux opportunités, aux collaborations et aux défis stimulants qui me permettront de grandir professionnellement et personnellement.",
+  "en": "Hello everyone,\nMy name is Cédric ROUILLÉ, I am 39 years old, and here is my personal introduction.\nFor about ten years, I dedicated my time and energy to the restaurant industry.\nIt was an enriching period where I developed essential skills such as time management, anticipating needs, teamwork, and stress management in a dynamic environment.\nHowever, over time, desires and needs evolve. Initially, I worked as a temporary order picker before undertaking a career change. It was a carefully considered decision, but I deeply believe in the importance of following one's passions and constantly developing oneself.\nI took accelerated training courses for adults, such as the Bac Pro SN RISC (Computer Networks and Communication Systems) and the BTS SNEC (Digital Electronic and Communication System), before working for 18 months as a temp, first in IT and then in electronics. This first experience allowed me to apply the skills acquired over the years and confirm my career change choices. However, it also highlighted some gaps in accelerated training programs.\nThanks to my perseverance and the IUT reform, I am now enrolled in a BUT GEII Electronics and Embedded Systems program.\nI am pursuing this training through an apprenticeship in a test validation position at a company that designs and produces systems for underground mapping. Historically, our clients prospected for oil and gas sources, but Sercel is now expanding into monitoring and energy transition. These are values I cherish much more than fossil fuels.\nMy main goals are to contribute to the development of interconnected tools, optimize energy consumption, assist in the creation and maintenance of electronic communication products, and design and propose hardware and software solutions to improve a product.\nThis transition is exciting and full of lessons. It pushes me to continuously learn in a completely different environment from the one in which I have spent my entire professional career.\nI am convinced that every experience, whether in catering, logistics, electronics, or even a more personal field, has helped shape my personality and given me a unique perspective.\nI am open to opportunities, collaborations, and exciting challenges that will allow me to grow both professionally and personally."
+  },
+  "Projects-year2-name": {
+    "fr": "Projets de l'année 2023/2024",
+    "en": "Projects for the Year 2023/2024"
+  },
+  "Project2.1-name": {
+    "fr": "Premier Projet : Réalisation d'un Portfolio",
+    "en": "First Project: Portfolio Creation (Only available in french)"
+  },
+  "Project2.2-name": {
+    "fr": "Second Projet : SAé - Stylo Voltmètre",
+    "en": "Second Project: Learning and Assessment Situation - Voltage Meter Pen (Only available in french)"
+  },
+  "Projects-year3-name": {
+    "fr": "Projets de l'année 2024/2025",
+    "en": "Projects for the Year 2024/2025"
+  },
+  "Project3.1-name": {
+    "fr": "Premier Projet : Automatisation de la feuille de présence",
+    "en": "First Project: Attendance Sheet Automation (Only available in french)"
+  },
+  "Project3.2-name": {
+    "fr": "Second Projet : SAé - Prise en main de l'ESP32",
+    "en": "Second Project: Learning and Assessment Situation - Getting Started with ESP32 (Only available in french)"
+  },
+  "LinkTab-name": {
+    "fr": "Liens utiles et amis",
+    "en": "Useful links and friends"
+  },
+  "LinkTab-Ressource-name": {
+    "fr": "Ressources",
+    "en": "Resources"
+  },
+  "LinkTab-xxxx-name": {
+    "fr": "xxxx",
+    "en": "xxxx"
+  },
+  "LinkTab-xxxxxx-name": {
+    "fr": "xxxxxx",
+    "en": "xxxxxx"
+  },
+  "LinkTab-xxxxxxxx-name": {
+    "fr": "xxxxxxxx",
+    "en": "xxxxxxxx"
+  },
+  "LinkTab-allrights-name": {
+    "fr": "©2025 - Cédric R. - Tous droits réservés",
+    "en": "©2025 - Cédric R. - All rights reserved"
+  },
+  "select-category": {
+    "fr": "Toutes les catégories",
+    "en": "All categories"
+  },
+  "LinkTab-Resources-Label": {
+    "fr": "Filtrer par catégorie :",
+    "en": "Filter by category :"
+  }
+}
+  

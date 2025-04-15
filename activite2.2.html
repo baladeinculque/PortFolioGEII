@@ -1,0 +1,60 @@
+<!DOCTYPE html>                                 
+<html lang="fr-FR">
+
+<head> 
+    <meta charset="UTF-8">
+    <title>CR - Stylo Voltmètre</title>
+    <link rel="shortcut icon" href="assets/icons/stylotvoltmetre.png" />
+    <link href="style.css" rel="stylesheet">
+</head>
+
+<body class="home">
+    <!--section class="retour"-->
+        <a class="nav retour" href="index.html#sae_area">Revenir sur la page des Projets</a>
+    </section>
+<div class="zone title">
+    <h1>Stylo Voltmètre</h1>
+</div>
+<div class="zone">
+    <h2>Objectifs :</h2><p class="p">Les Objectifs de cette activité sont de ...</p>
+
+    <table class="taches">
+    <tr>
+        <th><b>Tâches réalisées</b></th><th><b>Ressources utilisées</b></th><th><b>Traces</b></th><th><b>Autoévaluation</b></th>
+    </tr>
+    <tr>
+        <td><b>Nom de la tâche</b> (avec verbe d'action)<br>=> <b>objectif</b> (texte libre, en quelques mots qui définissent les points importants que je vais qualifier pour l'autoévaluation)<br>=> <b>description</b></td><td>Ressources matérielles, logicielles, pédagogiques, documentaires.</td><td>Présenter et nommer la ou les preuve(s) qui atteste(nt) de la réalisation de cette tâche.</td><td>Bilan. Ai-je atteint l'objectif de cette tâche ?</td>
+    </tr>
+    <tr>
+        <td><b>Nom de la tâche</b> (avec verbe d'action)<br>=> <b>objectif</b> (texte libre, en quelques mots qui définissent les points importants que je vais qualifier pour l'autoévaluation)<br>=> <b>description</b></td><td>Ressources matérielles, logicielles, pédagogiques, documentaires.</td><td>Présenter et nommer la ou les preuve(s) qui atteste(nt) de la réalisation de cette tâche.</td><td>Bilan. Ai-je atteint l'objectif de cette tâche ?</td>
+    </tr>
+    <tr>
+        <td><b>Nom de la tâche</b> (avec verbe d'action)<br>=> <b>objectif</b> (texte libre, en quelques mots qui définissent les points importants que je vais qualifier pour l'autoévaluation)<br>=> <b>description</b></td><td>Ressources matérielles, logicielles, pédagogiques, documentaires.</td><td>Présenter et nommer la ou les preuve(s) qui atteste(nt) de la réalisation de cette tâche.</td><td>Bilan. Ai-je atteint l'objectif de cette tâche ?</td>
+    </tr>
+    </table>
+</div>
+
+<section class="section footer" id="footer_area" style="bottom: 0px; width: 100%;">
+    <div id="footerContainer"></div>
+    <!--iframe id="footerFrame" src="footer.html" style="border:none;width:100%;height:365px;"></iframe-->
+</section>
+
+<script>
+    const toggleButton = document.getElementById('toggleButton');
+
+    // Fonction pour basculer entre le français et l'anglais
+    function toggleLanguage() {
+        const selectedValue = toggleButton.value;
+        if (selectedValue === "fr") {
+            location.href = "../fr/but2.html";
+        } else if (selectedValue === "en") {
+            location.href = "../en/but2.html";
+        }
+    }
+
+    // Ajouter un gestionnaire d'événement au bouton de sélection
+    toggleButton.addEventListener('change', toggleLanguage);
+</script>
+
+</body>
+</html>

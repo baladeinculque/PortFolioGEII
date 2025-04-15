@@ -1,0 +1,661 @@
+<!DOCTYPE html>                                 
+<html lang="fr-FR">
+<meta charset="UTF-8">
+
+<head>
+    <title>CR - ESP32</title>
+    <link rel="shortcut icon" href="assets/icons/mesurerenergie.png" />
+    <link href="style.css" rel="stylesheet">
+</head>
+
+<body class="home">
+    <!--section class="retour"-->
+        <a class="nav retour" href="index.html#sae_area">Revenir sur la page des Projets</a>
+    </section>
+<div class="zone title">
+    <h1>Prise en main de l'ESP32</h1>
+</div>
+<div class="zone">
+    <h2>Objectif :</h2><p class="p">Développer des compétences concernant le microcontroleur ESP32 en créant un projet individuel et restituer ces compétences au travers d'un demonstrateur de compétences.</p>
+
+    <h2>Description :</h2><p class="p">
+        Pour réaliser ce démonstrateur de compétences, je vais concevoir un module qui lit et enregistre des données. Pour ce faire je vais utiliser deux capteurs à ma disposition. Un capteur de courant et un capteur de temperature.
+        <br>
+        Ces données devront etre visible depuis un appareil exterieur en se connectant en WiFi à l'ESP32 pour y consulter une page web en local.
+    </p>
+
+    <table class="taches">
+    <tr>
+        <th><b>Tâches réalisées</b></th><th><b>Ressources utilisées</b></th><th><b>Traces</b></th><th><b>Autoévaluation</b></th>
+    </tr>
+    <tr>
+        <td>
+            <p class="p"><b>Rassembler les informations</b></p>
+            <p class="p">=> <b>objectif </b>
+                <br>
+                Rassembler le maximum d'information possible concernant l'ESP32 : Son nombre de port, les fonctions intégrées ...</p>
+            <p class="p">=> <b><a class="modal-header" onclick="showModal('description3_2_1')">description</a></b>
+                <div class="modal hidden modal-txt" id="description3_2_1">
+                    <div>
+                        <span id="x-button" class="close" onclick="closeModal('description3_2_1')">
+                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 32 32" fill="currentColor">
+                                <path d="M31.797 0.191c-0.264-0.256-0.686-0.25-0.942 0.015l-13.328 13.326c-0.598 0.581 0.342 1.543 0.942 0.942l13.328-13.326c0.27-0.262 0.27-0.695 0-0.957zM14.472 17.515c-0.264-0.256-0.686-0.25-0.942 0.015l-13.328 13.326c-0.613 0.595 0.34 1.562 0.942 0.942l13.328-13.326c0.27-0.262 0.27-0.695 0-0.957zM1.144 0.205c-0.584-0.587-1.544 0.336-0.942 0.942l30.654 30.651c0.613 0.625 1.563-0.325 0.942-0.942z"></path>
+                            </svg>
+                        </span>
+                    </div>
+                    <div class="modal-content">
+                        <p class="p">
+                            <h1>Introduction</h1>
+                            <p>Une carte de d&eacute;veloppement est mise &agrave; disposition le temps de la SA&eacute; afin de prendre en main le microcontr&ocirc;leur ESP32.</p>
+                            <img src="assets/traces/trace3.2.1_board.png">
+                            <h1>Acc&eacute;der &agrave; la documentation</h1>
+                            <p>J'ai commenc&eacute;, par l'interm&eacute;diaire d'un moteur de recherche, par rechercher les documents disponibles de cet ESP32 afin de voir ce que qu'il &eacute;tait possible de faire. Le site officiel d'ESPRESSIF, fabriquant de l'ESP32, rend disponible plusieurs documents utiles&nbsp;:</p>
+                            <ul>
+                            <li><a href="https://docs.espressif.com/projects/esp-idf/en/release-v4.2/esp32/hw-reference/esp32/get-started-devkitc.html" target="_blank">Carte de d&eacute;veloppement ESP32-DevKit V4</a></li>
+                            <li><a href="https://www.espressif.com/sites/default/files/documentation/esp32-wroom-32_datasheet_en.pdf" target="_blank">Datasheet ESP32-wroom-32</a></li>
+                            </ul>
+                            <h1>Identifier le nombre de PIN de disponibles</h1>
+                            <img src="assets/traces/trace3.2.1.png">
+                            <h1>Rep&eacute;rer les fonctions</h1>
+                            <img src="assets/traces/trace3.2.1_function.png">
+                            <p>Et &eacute;galement de rep&eacute;rer les fonctions qu&rsquo;il est capable de r&eacute;aliser.</p>
+                            <h1>Conclusion</h1>
+                            <p>Dans ma situation le microcontr&ocirc;leur est impos&eacute; mais cette &eacute;tape permet normalement de v&eacute;rifier si les fonctions &agrave; r&eacute;aliser pourront l&rsquo;&ecirc;tre par ce microcontr&ocirc;leur.</p>
+                            <p>Cette &eacute;tape permet &eacute;galement de voir les environnements disponibles et d&rsquo;en choisir un. La prochaine &eacute;tape sera donc de tester un environnement de d&eacute;veloppement.</p>
+                        </p>
+                    </div>
+                </div>
+            </p>
+            <!--p class="p">=> <a href="https://etuunivpoitiersfr-my.sharepoint.com/:w:/g/personal/cedric_rouille_etu_univ-poitiers_fr/EXUBNNWNzPVFuL9h16fxlwkBRyG3puwb_hk4EAni7oClYQ" target="_blank">Lien vers document word.</a></p-->
+        </td>
+        <td>
+            <p class="modal-p"><a resource-key="ESP32-DevKit">test</a></p>
+            <p class="modal-p"><a href="https://docs.espressif.com/projects/esp-idf/en/release-v4.2/esp32/hw-reference/esp32/get-started-devkitc.html" target="_blank">ESP32-DevKit V4</a></p>
+            <p class="modal-p"><a href="https://www.espressif.com/sites/default/files/documentation/esp32-wroom-32_datasheet_en.pdf" target="_blank">Datasheet ESP32-wroom-32</a></p>
+        </td>
+        <td>
+            <img class="modal-header" src="assets/traces/trace3.2.1.png" width="100%" onclick="showModal('trace3_2_1')">
+            <div class="modal hidden modal-img" id="trace3_2_1">
+                <span id="x-button" class="close" onclick="closeModal('trace3_2_1')">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 32 32" fill="currentColor">
+                        <path d="M31.797 0.191c-0.264-0.256-0.686-0.25-0.942 0.015l-13.328 13.326c-0.598 0.581 0.342 1.543 0.942 0.942l13.328-13.326c0.27-0.262 0.27-0.695 0-0.957zM14.472 17.515c-0.264-0.256-0.686-0.25-0.942 0.015l-13.328 13.326c-0.613 0.595 0.34 1.562 0.942 0.942l13.328-13.326c0.27-0.262 0.27-0.695 0-0.957zM1.144 0.205c-0.584-0.587-1.544 0.336-0.942 0.942l30.654 30.651c0.613 0.625 1.563-0.325 0.942-0.942z"></path>
+                    </svg>
+                </span>
+                <img class="modal-center" src="assets/traces/trace3.2.1.png">
+            </div>
+        </td>
+        <td>
+            <span class="modal-header" onclick="showModal('autoEvaluation3_2_1')"><img src="assets/icons/autoeval_vert.png" width="100%"></span>
+            <div class="modal hidden modal-txt" id="autoEvaluation3_2_1">
+                <div>
+                    <span id="x-button" class="close" onclick="closeModal('autoEvaluation3_2_1')">
+                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 32 32" fill="currentColor">
+                            <path d="M31.797 0.191c-0.264-0.256-0.686-0.25-0.942 0.015l-13.328 13.326c-0.598 0.581 0.342 1.543 0.942 0.942l13.328-13.326c0.27-0.262 0.27-0.695 0-0.957zM14.472 17.515c-0.264-0.256-0.686-0.25-0.942 0.015l-13.328 13.326c-0.613 0.595 0.34 1.562 0.942 0.942l13.328-13.326c0.27-0.262 0.27-0.695 0-0.957zM1.144 0.205c-0.584-0.587-1.544 0.336-0.942 0.942l30.654 30.651c0.613 0.625 1.563-0.325 0.942-0.942z"></path>
+                        </svg>
+                    </span>
+                </div>
+                <div class="modal-content">
+                    <p>Cette activité s'est déroulée sans difficultés particulières.</p>
+                    <p>Toutes les étapes ont été réalisées conformément aux attentes, sans rencontrer d'obstacles majeurs.</p>
+                    <p>L'installation et la configuration se sont faites de manière fluide, et les différents éléments ont fonctionné comme prévu.</p>
+                    <p>Les tests effectués ont confirmé le bon fonctionnement du système, garantissant des résultats conformes aux objectifs fixés.</p>
+                    <p>L'ensemble du processus s'est avéré efficace et maîtrisé, permettant d'atteindre les résultats escomptés sans imprévus.</p>
+                </div>
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <p class="p"><b>Test d'un IDE</b></p>
+            <p class="p">=> <b>objectif </b>
+            <br>
+            Se familiariser avec un IDE et le choisir pour la suite du projet.</p>
+            <p class="p">=> <b><a class="modal-header" onclick="showModal('description3_2_2')">description</a></b>
+                <div class="modal hidden modal-txt" id="description3_2_2">
+                    <div>
+                        <span id="x-button" class="close" onclick="closeModal('description3_2_2')">
+                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 32 32" fill="currentColor">
+                                <path d="M31.797 0.191c-0.264-0.256-0.686-0.25-0.942 0.015l-13.328 13.326c-0.598 0.581 0.342 1.543 0.942 0.942l13.328-13.326c0.27-0.262 0.27-0.695 0-0.957zM14.472 17.515c-0.264-0.256-0.686-0.25-0.942 0.015l-13.328 13.326c-0.613 0.595 0.34 1.562 0.942 0.942l13.328-13.326c0.27-0.262 0.27-0.695 0-0.957zM1.144 0.205c-0.584-0.587-1.544 0.336-0.942 0.942l30.654 30.651c0.613 0.625 1.563-0.325 0.942-0.942z"></path>
+                            </svg>
+                        </span>
+                    </div>
+                    <div class="modal-content">
+                        <h1>Introduction</h1>
+                        <p>Je commence par connecter une LED de mani&egrave;re &agrave; tester un IDE et me familiariser avec celui-ci.</p>
+                        <h1>IDE</h1>
+                        <p>J&rsquo;ai entendu dire par mon entourage qu&rsquo;il &eacute;tait possible de programmer un STM32 par l&rsquo;IDE d&rsquo;Arduino, et donc d&rsquo;avoir acc&egrave;s aux librairies de celui-ci ainsi que de profiter d&rsquo;une communaut&eacute; en ligne. <a href="https://support.arduino.cc/hc/en-us/articles/360019833020-Download-and-install-Arduino-IDE">Proc&eacute;dure d'installation de l'Arduino IDE</a>.</p>
+                        <h1>Sp&eacute;cification ESP32 sur Arduino IDE</h1>
+                        <p>Ajouter le support ESP32 : Ouvrez l'Arduino IDE, puis allez dans Fichier &gt; Pr&eacute;f&eacute;rences. Dans la section URL de gestionnaire de cartes suppl&eacute;mentaires, ajoutez l'URL suivante :</p>
+                        <p>https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json.</p>
+                        <p>Cliquez sur OK pour sauvegarder.</p>
+                        <p>Installer le gestionnaire de cartes ESP32 : Allez dans Outils &gt; Type de carte &gt; Gestionnaire de cartes. Recherchez "esp32" et cliquez sur Installer. Une fois l'installation termin&eacute;e, vous verrez un message de confirmation.</p>
+                        <p>S&eacute;lectionner la carte et le port : Apr&egrave;s l'installation, allez dans Outils &gt; Type de carte et s&eacute;lectionnez esp32. Ensuite, allez dans Outils &gt; Port et s&eacute;lectionnez le port correspondant &agrave; votre carte ESP32.</p>
+                        <p><a href="https://www.upesy.fr/blogs/tutorials/install-esp32-on-arduino-ide-complete-guide">Tutoriel pour associer un ESP32 &agrave; un Arduino IDE</a></p>
+                        <h1>Connexion d&rsquo;une LED</h1>
+                        <p>Mat&eacute;riel n&eacute;cessaire&nbsp;:</p>
+                        <ul>
+                        <li>Arduino IDE install&eacute; et utilisable avec carte ESP32 et son c&acirc;ble USB</li>
+                        <li>Carte ESP32 dev kit</li>
+                        <li>LED</li>
+                        <li>R&eacute;sistance de 220Ω</li>
+                        </ul>
+                        <p>C&acirc;blage&nbsp;:</p>
+                        <ul>
+                        <li>Connecter en s&eacute;rie la LED et la r&eacute;sistance entre la PIN2 et le GND de la carte.</li>
+                        <li>La LED est connect&eacute;e par la patte la plus longue (anode) &agrave; l&rsquo;ESP32 (avec la r&eacute;sistance entre les deux) et la patte la plus courte (cathode) au GND.</li>
+                        </ul>
+                        <img src="assets/traces/trace3.2.2.jpg">
+                        <h1>Programmation</h1>
+                        <img src="assets/traces/trace3.2.2_code.png">
+                        <p>pinMode(ledPin, OUTPUT); initialise la broche de la LED comme une sortie.</p>
+                        <p>digitalWrite(ledPin, HIGH); allume la LED.</p>
+                        <p>digitalWrite(ledPin, LOW); &eacute;teint la LED.</p>
+                        <p>delay(1000); cr&eacute;e une pause de 1000 millisecondes (1 seconde).</p>
+                        <h1>Conclusion</h1>
+                        <p>Le test de code que j&rsquo;ai effectu&eacute; permet de se familiariser avec l'Arduino IDE ainsi que la carte ESP32. En suivant ces &eacute;tapes, j&rsquo;ai appris &agrave; configurer l'environnement de d&eacute;veloppement, &agrave; connecter et contr&ocirc;ler des composants simples comme une LED, et &agrave; t&eacute;l&eacute;charger du code sur l'ESP32.</p>
+                        <p>Je souhaite continuer &agrave; explorer et &agrave; d&eacute;velopper mon projet sur cette plateforme. La prochaine &eacute;tape consistera &agrave; me familiariser avec les diff&eacute;rents capteurs que j'utiliserai dans la suite du projet.</p>
+                    </div>
+                </div>
+            </p>
+        </td>
+        <td>
+            <p class="modal-p"><a href="https://docs.arduino.cc/" target="_blank">Documentations Arduino</a></p>
+        </td>
+        <td>
+            <img class="modal-header" src="assets/traces/trace3.2.2.jpg" width="100%" onclick="showModal('trace3_2_2')">
+            <div class="modal hidden modal-img" id="trace3_2_2">
+                <span id="x-button" class="close" onclick="closeModal('trace3_2_2')">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 32 32" fill="currentColor">
+                        <path d="M31.797 0.191c-0.264-0.256-0.686-0.25-0.942 0.015l-13.328 13.326c-0.598 0.581 0.342 1.543 0.942 0.942l13.328-13.326c0.27-0.262 0.27-0.695 0-0.957zM14.472 17.515c-0.264-0.256-0.686-0.25-0.942 0.015l-13.328 13.326c-0.613 0.595 0.34 1.562 0.942 0.942l13.328-13.326c0.27-0.262 0.27-0.695 0-0.957zM1.144 0.205c-0.584-0.587-1.544 0.336-0.942 0.942l30.654 30.651c0.613 0.625 1.563-0.325 0.942-0.942z"></path>
+                    </svg>
+                </span>
+                <img class="modal-center" src="assets/traces/trace3.2.2.jpg">
+            </div>
+        </td>
+        <td>
+            <span class="modal-header" onclick="showModal('autoEvaluation3_2_2')"><img src="assets/icons/autoeval_vert.png" width="100%"></span>
+            <div class="modal hidden modal-txt" id="autoEvaluation3_2_2">
+                <div>
+                    <span id="x-button" class="close" onclick="closeModal('autoEvaluation3_2_2')">
+                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 32 32" fill="currentColor">
+                            <path d="M31.797 0.191c-0.264-0.256-0.686-0.25-0.942 0.015l-13.328 13.326c-0.598 0.581 0.342 1.543 0.942 0.942l13.328-13.326c0.27-0.262 0.27-0.695 0-0.957zM14.472 17.515c-0.264-0.256-0.686-0.25-0.942 0.015l-13.328 13.326c-0.613 0.595 0.34 1.562 0.942 0.942l13.328-13.326c0.27-0.262 0.27-0.695 0-0.957zM1.144 0.205c-0.584-0.587-1.544 0.336-0.942 0.942l30.654 30.651c0.613 0.625 1.563-0.325 0.942-0.942z"></path>
+                        </svg>
+                    </span>
+                </div>
+                <div class="modal-content">
+                    <p>Cette activité s'est déroulée sans difficultés particulières.</p>
+                    <p>Toutes les étapes ont été réalisées conformément aux attentes, sans rencontrer d'obstacles majeurs.</p>
+                    <p>L'installation et la configuration se sont faites de manière fluide, et les différents éléments ont fonctionné comme prévu.</p>
+                    <p>Les tests effectués ont confirmé le bon fonctionnement du système, garantissant des résultats conformes aux objectifs fixés.</p>
+                    <p>L'ensemble du processus s'est avéré efficace et maîtrisé, permettant d'atteindre les résultats escomptés sans imprévus.</p>
+                </div>
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <p class="p"><b>Prise en main des capteurs</b></p>
+            <p class="p">=> <b>objectif </b>
+            <br>
+            Me familiariser avec les capteurs à ma disposition qui me permettrons d'acquerir des données dans la suite du projet.</p>
+            <p class="p">=> <b><a class="modal-header" onclick="showModal('description3_2_3')">description</a></b>
+                <div class="modal hidden modal-txt" id="description3_2_3">
+                    <div>
+                        <span id="x-button" class="close" onclick="closeModal('description3_2_3')">
+                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 32 32" fill="currentColor">
+                                <path d="M31.797 0.191c-0.264-0.256-0.686-0.25-0.942 0.015l-13.328 13.326c-0.598 0.581 0.342 1.543 0.942 0.942l13.328-13.326c0.27-0.262 0.27-0.695 0-0.957zM14.472 17.515c-0.264-0.256-0.686-0.25-0.942 0.015l-13.328 13.326c-0.613 0.595 0.34 1.562 0.942 0.942l13.328-13.326c0.27-0.262 0.27-0.695 0-0.957zM1.144 0.205c-0.584-0.587-1.544 0.336-0.942 0.942l30.654 30.651c0.613 0.625 1.563-0.325 0.942-0.942z"></path>
+                            </svg>
+                        </span>
+                    </div>
+                    <div class="modal-content">
+                        <h1>Introduction</h1>
+                        <p>Le projet final sera compos&eacute; de plusieurs capteurs de courant (qt&eacute; &agrave; d&eacute;finir par la suite) et d&rsquo;une sonde de temp&eacute;rature. Pour le moment le d&eacute;veloppement va se r&eacute;aliser avec un seul capteur de courant et une sonde de temp&eacute;rature (et humidit&eacute;) d&eacute;j&agrave; &agrave; ma disposition.</p>
+                        <h1>Datasheet</h1>
+                        <h2>Sonde de temp&eacute;rature et humidit&eacute; DHT11</h2>
+                        <ul>
+                        <li>Tension de fonctionnement : 3.5V &agrave; 5.5V</li>
+                        <li>Courant de fonctionnement : 0.3mA (mesure) / 60&micro;A (veille)</li>
+                        <li>Plage de temp&eacute;rature : 0&deg;C &agrave; 50&deg;C</li>
+                        <li>Plage d'humidit&eacute; : 20% &agrave; 90%</li>
+                        <li>R&eacute;solution : 16 bits pour la temp&eacute;rature et l'humidit&eacute;</li>
+                        <li>Pr&eacute;cision : &plusmn;1&deg;C pour la temp&eacute;rature et &plusmn;1% pour l'humidit&eacute;</li>
+                        <li>Type de sortie : Donn&eacute;es s&eacute;rie</li>
+                        <li>Temps de r&eacute;ponse : 2 &agrave; 8 secondes (selon les conditions)</li>
+                        <li>Consommation d'&eacute;nergie : Faible</li>
+                        </ul>
+                        <h2>Capteur de courant ACHS-7121</h2>
+                        <ul>
+                        <li>Alimentation : 5&nbsp;Vcc</li>
+                        <li>Consommation : 15&nbsp;mA</li>
+                        <li>Plage de mesure : -10&nbsp;A &agrave; +10&nbsp;A en AC ou DC</li>
+                        <li>Plage d&rsquo;utilisation : 30 Volts maxi</li>
+                        <li>Sensibilit&eacute; : 185&nbsp;mV/A &agrave; 5 Vcc</li>
+                        <li>Tension de sortie &agrave; z&eacute;ro courant&nbsp;: 2,5V (sous 5V d&rsquo;alimentation)</li>
+                        <li>Pr&eacute;cision : &plusmn; 1,5&nbsp;%</li>
+                        <li>Shunt : 0,7&nbsp;m&Omega;</li>
+                        <li>Bande passante : 80 kHz</li>
+                        <li>T&deg; de service : -40 &agrave; +125 &deg;C</li>
+                        </ul>
+                        <ul>
+                        <li>Dimensions : 21 x 18 x 3 mm</li>
+                        </ul>
+                        <h1>Connexion de la sonde de temp&eacute;rature</h1>
+                        <h2>Connexion physique</h2>
+                        <ul>
+                        <li>GND du DHT11 au GND de la carte</li>
+                        <li>VCC du DHT11 au 3,3V de la carte</li>
+                        <li>Out de la sonde au GPIO 13 de la carte</li>
+                        </ul>
+                        <h2>Implantation du programme</h2>
+                        <p>Pour implanter un programme dans l&rsquo;ESP32 j&rsquo;ai d&rsquo;abord ajout&eacute; la biblioth&egrave;que &laquo;&nbsp;DHT sensor library&nbsp;&raquo; Pour cela il faut depuis l&rsquo;arduino IDE aller &agrave; Sketch&gt;Include Library&gt;Manage libraries et saisir &laquo;&nbsp;DHT sensor library&nbsp;&raquo; et t&eacute;l&eacute;charger la version de <u>Adafruit</u>.</p>
+                        <p>Ensuite aller &agrave; File&gt;Examples&gt;DHT sensor library et s&eacute;lectionner un des deux exemples pr&eacute;sents.</p>
+                        <p>En choisissant le premier &laquo;&nbsp;DHT_Inified_Sensor&nbsp;&raquo;&nbsp;:</p>
+                        <ul>
+                        <li>Un programme apparait et y modifier la ligne qui d&eacute;clare la PIN connect&eacute; au Out de la sonde. Dans mon cas #define DHTPIN 13</li>
+                        <li>Modifier &eacute;galement le type de sonde, dans mon cas DHT11</li>
+                        <li>Compiler et t&eacute;l&eacute;verser le programme dans l&rsquo;ESP32</li>
+                        </ul>
+                        <p>Ouvrir le moniteur s&eacute;rie en allant Tools&gt;Serial Monitor</p>
+                        <ul>
+                        <li>Modifier la vitesse du moniteur s&eacute;rie pour correspondre aux param&egrave;tres du programme t&eacute;l&eacute;vers&eacute;, dans mon cas 9600 baud.</li>
+                        </ul>
+                        <p>Dans ce programme la temp&eacute;rature en Celsius et l&rsquo;humidit&eacute; s&rsquo;affiche toutes les 2 secondes.</p>
+                        <img src="assets/traces/trace3.2.3_1.png">
+                        <p>En choisissant le second &laquo;&nbsp;DHTtester&nbsp;&raquo;&nbsp;:</p>
+                        <ul>
+                        <li>Un programme apparait et y modifier la ligne qui d&eacute;clare la PIN connect&eacute; au Out de la sonde. Dans mon cas #define DHTPIN 13</li>
+                        <li>Modifier &eacute;galement le type de sonde, dans mon cas DHT11</li>
+                        <li>Compiler et t&eacute;l&eacute;verser le programme dans l&rsquo;ESP32</li>
+                        </ul>
+                        <p>Ouvrir le moniteur s&eacute;rie en allant Tools&gt;Serial Monitor</p>
+                        <ul>
+                        <li>Modifier la vitesse du moniteur s&eacute;rie pour correspondre aux param&egrave;tres du programme t&eacute;l&eacute;vers&eacute;, dans mon cas 9600 baud.</li>
+                        </ul>
+                        <p>Dans ce programme l&rsquo;humidit&eacute; et la temp&eacute;rature s&rsquo;affiche en Celsius et en Fahrenheit toutes les 2 secondes &eacute;galement.</p>
+                        <img src="assets/traces/trace3.2.3_2.png">
+                        <p>On remarque dans ce cas l&rsquo;indice de chaleur. Il indique &agrave; quel point la temp&eacute;rature peut sembler plus &eacute;lev&eacute;e en raison de l&rsquo;humidit&eacute; car la capacit&eacute; de notre corps &agrave; se rafraichir par la transpiration est r&eacute;duite lorsque l&rsquo;humidit&eacute; est &eacute;lev&eacute;e.</p>
+                        <h1>Connexion du capteur de courant</h1>
+                        <h2>Connexion physique</h2>
+                        <ul>
+                        <li>GND du capteur au GND de la carte</li>
+                        <li>VCC du capteur au 3,3V de la carte</li>
+                        <li>Out du capteur au GPIO 34 de la carte</li>
+                        </ul>
+                        <h2>Implantation du programme</h2>
+                        <p>En ce qui concerne ce capteur je n&rsquo;ai pas trouv&eacute; de biblioth&egrave;que, alors j&rsquo;ai &eacute;crit un programme &agrave; partir d&rsquo;informations rassembl&eacute;es sur internet.</p>
+                        <p>La programmation réalisée pour ce capteur est detaillée dans l'activité suivante.</p>
+                        <h1>Conclusion</h1>
+                        <p></p>
+                    </div>
+                </div>
+            </p>
+        </td>
+        <td>
+            <p class="modal-p"><a href="https://docs.espressif.com/projects/esp-idf/en/release-v4.2/esp32/hw-reference/esp32/get-started-devkitc.html" target="_blank">ESP32-DevKit V4</a></p>
+            <p class="modal-p"><a href="https://www.pololu.com/file/0J1652/ACHS-712x-DS101_2018-02-28.pdf" target="_blank">Capteur de courant</a></p>
+            <p class="modal-p"><a href="https://www.mouser.com/datasheet/2/758/DHT11-Technical-Data-Sheet-Translated-Version-1143054.pdf?srsltid=AfmBOopEl_sNTsczD_SHb7sHJsDH9mJUSpXp-jLzwr9AlFVB7T20mSis" target="_blank">Sonde de température</a></p>
+            <p class="modal-p"><a href="https://www.arduino.cc/en/software" target="_blank">Arduino IDE</a></p>
+            <p class="modal-p"><a href="https://chatgpt.com/" target="_blank">ChatGPT</a></p>
+        </td>
+        <td>
+            <img class="modal-header" src="assets/traces/trace3.2.3.png" width="100%" onclick="showModal('trace3_2_3')">
+            <div class="modal hidden modal-img" id="trace3_2_3">
+                <span id="x-button" class="close" onclick="closeModal('trace3_2_3')">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 32 32" fill="currentColor">
+                        <path d="M31.797 0.191c-0.264-0.256-0.686-0.25-0.942 0.015l-13.328 13.326c-0.598 0.581 0.342 1.543 0.942 0.942l13.328-13.326c0.27-0.262 0.27-0.695 0-0.957zM14.472 17.515c-0.264-0.256-0.686-0.25-0.942 0.015l-13.328 13.326c-0.613 0.595 0.34 1.562 0.942 0.942l13.328-13.326c0.27-0.262 0.27-0.695 0-0.957zM1.144 0.205c-0.584-0.587-1.544 0.336-0.942 0.942l30.654 30.651c0.613 0.625 1.563-0.325 0.942-0.942z"></path>
+                    </svg>
+                </span>
+                <img class="modal-center" src="assets/traces/trace3.2.3.png">
+            </div>
+        </td>
+        <td>
+            <span class="modal-header" onclick="showModal('autoEvaluation3_2_3')"><img src="assets/icons/autoeval_vert.png" width="100%"></span>
+            <div class="modal hidden modal-txt" id="autoEvaluation3_2_3">
+                <div>
+                    <span id="x-button" class="close" onclick="closeModal('autoEvaluation3_2_3')">
+                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 32 32" fill="currentColor">
+                            <path d="M31.797 0.191c-0.264-0.256-0.686-0.25-0.942 0.015l-13.328 13.326c-0.598 0.581 0.342 1.543 0.942 0.942l13.328-13.326c0.27-0.262 0.27-0.695 0-0.957zM14.472 17.515c-0.264-0.256-0.686-0.25-0.942 0.015l-13.328 13.326c-0.613 0.595 0.34 1.562 0.942 0.942l13.328-13.326c0.27-0.262 0.27-0.695 0-0.957zM1.144 0.205c-0.584-0.587-1.544 0.336-0.942 0.942l30.654 30.651c0.613 0.625 1.563-0.325 0.942-0.942z"></path>
+                        </svg>
+                    </span>
+                </div>
+                <div class="modal-content">
+                    <p>Cette activité s'est déroulée sans difficultés particulières.</p>
+                    <p>Toutes les étapes ont été réalisées conformément aux attentes, sans rencontrer d'obstacles majeurs.</p>
+                    <p>L'installation et la configuration se sont faites de manière fluide, et les différents éléments ont fonctionné comme prévu.</p>
+                    <p>Les tests effectués ont confirmé le bon fonctionnement du système, garantissant des résultats conformes aux objectifs fixés.</p>
+                    <p>L'ensemble du processus s'est avéré efficace et maîtrisé, permettant d'atteindre les résultats escomptés sans imprévus.</p>
+                </div>
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <p class="p"><b>Lecture et Filtrage</b></p>
+            <p class="p">=> <b>objectif </b>
+                <br>
+                Lire les données.</p>
+            <p class="p">=> <b><a class="modal-header" onclick="showModal('description3_2_4')">description</a></b>
+                <div class="modal hidden modal-txt" id="description3_2_4">
+                    <div>
+                        <span id="x-button" class="close" onclick="closeModal('description3_2_4')">
+                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 32 32" fill="currentColor">
+                                <path d="M31.797 0.191c-0.264-0.256-0.686-0.25-0.942 0.015l-13.328 13.326c-0.598 0.581 0.342 1.543 0.942 0.942l13.328-13.326c0.27-0.262 0.27-0.695 0-0.957zM14.472 17.515c-0.264-0.256-0.686-0.25-0.942 0.015l-13.328 13.326c-0.613 0.595 0.34 1.562 0.942 0.942l13.328-13.326c0.27-0.262 0.27-0.695 0-0.957zM1.144 0.205c-0.584-0.587-1.544 0.336-0.942 0.942l30.654 30.651c0.613 0.625 1.563-0.325 0.942-0.942z"></path>
+                            </svg>
+                        </span>
+                    </div>
+                    <div class="modal-content">
+                        <h1>Introduction</h1>
+                        <p></p>
+                        <h1>Les étapes de lecture</h1>
+                        <h2>1.&nbsp;&nbsp;&nbsp;&nbsp; Lire la PIN analogique et l&rsquo;afficher sur le moniteur s&eacute;rie</h3>
+                        <p>En faisant une lecture du capteur analogique je constate une valeur sur 4 chiffres. Il s&rsquo;agit de la valeur brute de la sortie analogique proportionnelle au courant mesur&eacute; convertit avec un convertisseur analogique/num&eacute;rique.</p>
+                        <img src="assets/traces/trace3.2.4_1.png">
+                        <h2>2.&nbsp;&nbsp;&nbsp;&nbsp; Filtrage num&eacute;rique</h3>
+                        <img src="assets/traces/trace3.2.4_2.png">
+                        <p>Je r&eacute;alise un filtrage num&eacute;rique de mani&egrave;re &agrave; obtenir une valeur plus stable et r&eacute;duire les variations &agrave; l&rsquo;affichage.</p>
+                        <p>J&rsquo;ai choisi de cr&eacute;er une fonction de filtrage qui peut &ecirc;tre appeler pour filtrer la valeur brut mais &eacute;galement pouvoir &ecirc;tre appel&eacute;e &eacute;galement pour filtrer les valeurs d&eacute;cimales en tension ou en courant qui seront converties par la suite.</p>
+                        <h2>3.&nbsp;&nbsp;&nbsp;&nbsp; Convertir la valeur num&eacute;rique en analogique</h3>
+                        <p>La valeur retourn&eacute;e par le capteur est l&rsquo;image du courant consomm&eacute; en tension. Avec le convertisseur analogique/num&eacute;rique cette valeur brut est lisible avec une valeur comprise entre 0 et 4095 car ce convertisseur fonctionne sur 12 bits ().</p>
+                        <img src="assets/traces/trace3.2.4_3.png">
+                        <p>Je me rends compte &eacute;galement que la valeur lue d&eacute;pend de la temp&eacute;rature du capteur car le matin la valeur obtenue se stabilise plus bas que le reste de la journ&eacute;e. Mais pour le moment je ne vais pas tenir compte de cette variable et laisser 2,17 Volts au niveau 0. En effet, sur la datasheet il est &eacute;crit que le niveau 0 amp&egrave;re se situe &agrave; 2,5 Volts mais je constate que dans mon cas le niveau 0 se stabilise autour de 2,17 Volts.</p>
+                        <h2>4.&nbsp;&nbsp;&nbsp;&nbsp; Faire apparaitre la valeur du courant</h3>
+                        <img src="assets/traces/trace3.2.4_4.png">
+                        <p>Dans la datasheet est visible un facteur de sensibilit&eacute; &agrave; 185&nbsp;mV/A si le capteur est aliment&eacute; 5 Vcc ce qui est mon cas. J&rsquo;ai donc &eacute;crit une fonction qui convertie la tension en amp&egrave;re en d&eacute;duisant l&rsquo;offset de 2,17 Volts. J&rsquo;effectue &eacute;galement un moyennage de la valeur en tension avant de la convertir en amp&egrave;re de mani&egrave;re &agrave; r&eacute;duire les variations.</p>
+                        <h1>Conclusion</h1>
+                        <p>La prochaine étape et de rendre lisible cette valeur de consommation de courant instantanée depuis un appareil externe qui se connecte via WiFi à l'ESP32.</p>
+                    </div>
+                </div>
+            </p>
+        </td>
+        <td>
+            <p class="modal-p"><a href="https://docs.espressif.com/projects/esp-idf/en/release-v4.2/esp32/hw-reference/esp32/get-started-devkitc.html" target="_blank">ESP32-DevKit V4</a></p>
+            <p class="modal-p"><a href="https://www.pololu.com/file/0J1652/ACHS-712x-DS101_2018-02-28.pdf" target="_blank">Capteur de courant</a></p>
+            <p class="modal-p"><a href="https://www.arduino.cc/en/software" target="_blank">Arduino IDE</a></p>
+            <p class="modal-p"><a href="https://nathandionnet86.wixsite.com/univ-poitiers" target="_blank">Nathan D.</a></p>
+            <p class="modal-p"><a href="https://chatgpt.com/" target="_blank">ChatGPT</a></p>
+        </td>
+        <td>
+            <img class="modal-header" src="assets/traces/trace3.2.4.png" width="100%" onclick="showModal('trace3_2_4')">
+            <div class="modal hidden modal-img" id="trace3_2_4">
+                <span id="x-button" class="close" onclick="closeModal('trace3_2_4')">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 32 32" fill="currentColor">
+                        <path d="M31.797 0.191c-0.264-0.256-0.686-0.25-0.942 0.015l-13.328 13.326c-0.598 0.581 0.342 1.543 0.942 0.942l13.328-13.326c0.27-0.262 0.27-0.695 0-0.957zM14.472 17.515c-0.264-0.256-0.686-0.25-0.942 0.015l-13.328 13.326c-0.613 0.595 0.34 1.562 0.942 0.942l13.328-13.326c0.27-0.262 0.27-0.695 0-0.957zM1.144 0.205c-0.584-0.587-1.544 0.336-0.942 0.942l30.654 30.651c0.613 0.625 1.563-0.325 0.942-0.942z"></path>
+                    </svg>
+                </span>
+                <img class="modal-center" src="assets/traces/trace3.2.4.png">
+            </div>
+        </td>
+        <td>
+            <span class="modal-header" onclick="showModal('autoEvaluation3_2_4')"><img src="assets/icons/autoeval_orange.png" width="100%"></span>
+            <div class="modal hidden modal-txt" id="autoEvaluation3_2_4">
+                <div>
+                    <span id="x-button" class="close" onclick="closeModal('autoEvaluation3_2_4')">
+                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 32 32" fill="currentColor">
+                            <path d="M31.797 0.191c-0.264-0.256-0.686-0.25-0.942 0.015l-13.328 13.326c-0.598 0.581 0.342 1.543 0.942 0.942l13.328-13.326c0.27-0.262 0.27-0.695 0-0.957zM14.472 17.515c-0.264-0.256-0.686-0.25-0.942 0.015l-13.328 13.326c-0.613 0.595 0.34 1.562 0.942 0.942l13.328-13.326c0.27-0.262 0.27-0.695 0-0.957zM1.144 0.205c-0.584-0.587-1.544 0.336-0.942 0.942l30.654 30.651c0.613 0.625 1.563-0.325 0.942-0.942z"></path>
+                        </svg>
+                    </span>
+                </div>
+                <div class="modal-content">
+                    <p>Le convertisseur Analogique/Numérique qui est sur la carte de développement est trop sensible aux variations de température. En ce moment avec le froid qu'il a fait dehors, ou même en restant dans la même pièce, le CAN ne se stabilise jamais à la même consommation même sans consommateur. Mais de toute façon ma fonction de filtrage numérique est à revoir car pour limiter les variations j'ai forcer sur le filtrage, mais lors du demarrage du consommateur, la consommation monte trop progressivement.</p>
+                    <p>Il sera juditieux de revoir cette partie par la suite</p>
+                </div>
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <p class="p"><b>Creation page Web</b></p>
+            <p class="p">=> <b>objectif </b>
+                <br>
+                Heberger un site internet sur l'ESP.</p>
+            <p class="p">=> <a class="modal-header" onclick="showModal('description3_2_5')"><b>description </b></a>
+                <div class="modal hidden modal-txt" id="description3_2_5">
+                    <div>
+                        <span id="x-button" class="close" onclick="closeModal('description3_2_5')">
+                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 32 32" fill="currentColor">
+                                <path d="M31.797 0.191c-0.264-0.256-0.686-0.25-0.942 0.015l-13.328 13.326c-0.598 0.581 0.342 1.543 0.942 0.942l13.328-13.326c0.27-0.262 0.27-0.695 0-0.957zM14.472 17.515c-0.264-0.256-0.686-0.25-0.942 0.015l-13.328 13.326c-0.613 0.595 0.34 1.562 0.942 0.942l13.328-13.326c0.27-0.262 0.27-0.695 0-0.957zM1.144 0.205c-0.584-0.587-1.544 0.336-0.942 0.942l30.654 30.651c0.613 0.625 1.563-0.325 0.942-0.942z"></path>
+                            </svg>
+                        </span>
+                    </div>
+                    <div class="modal-content">
+                        <h1>Introduction</h1>
+                        <p>Cette activit&eacute; a pour objectif final d'afficher en temps r&eacute;el, sur une interface web, la consommation instantan&eacute;e et autres informations en lien avec l'ESP32.</p>
+                        <h1>Exemple</h1>
+                        <p>Dans les exemples de Arduino IDE se trouve <u>WiFiAccessPoint</u> qui permet de cr&eacute;er une page html h&eacute;berg&eacute; sur l'ESP32 et de commander l'allumage et l'extinction d'une LED.</p>
+                        <img src="assets/traces/trace3.2.5_1.png">
+                        <p>Je me suis donc inspir&eacute; de ce code pour cr&eacute;er une page html et commander deux LED ainsi qu'afficher la temp&eacute;rature et humidit&eacute;.</p>
+                        <h1>Code</h1>
+                        <p class="p"><img src="assets/traces/trace3.2.5_2.png"></p>
+                        <p class="p"><img src="assets/traces/trace3.2.5_3.png"></p>
+                        <p class="p"><img src="assets/traces/trace3.2.5_4.png"></p>
+                        <p class="p"><img src="assets/traces/trace3.2.5_5.png"></p>
+                    </div>
+                </div>
+            </p>
+        </td>
+        <td>
+            <p class="modal-p"><a href="https://www.w3schools.com/html/default.asp" target="_blank">W3 Schools</a></p>
+            <p class="modal-p"><a href="https://randomnerdtutorials.com/esp32-access-point-ap-web-server/?utm_source=chatgpt.com" target="_blank">Création Access Point</a></p>
+            <p class="modal-p"><a href="https://randomnerdtutorials.com/esp32-web-server-sent-events-sse/?utm_source=chatgpt.com" target="_blank">Web Server utilisant Server-Sent Events</a></p>
+            <p class="modal-p"><a href="https://chatgpt.com/" target="_blank">ChatGPT</a></p>
+        </td>
+        <td>
+            <img class="modal-header" src="assets/traces/trace3.2.5.png" width="100%" onclick="showModal('trace3_2_5')">
+            <div class="modal hidden modal-img" id="trace3_2_5">
+                <span id="x-button" class="close" onclick="closeModal('trace3_2_5')">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 32 32" fill="currentColor">
+                        <path d="M31.797 0.191c-0.264-0.256-0.686-0.25-0.942 0.015l-13.328 13.326c-0.598 0.581 0.342 1.543 0.942 0.942l13.328-13.326c0.27-0.262 0.27-0.695 0-0.957zM14.472 17.515c-0.264-0.256-0.686-0.25-0.942 0.015l-13.328 13.326c-0.613 0.595 0.34 1.562 0.942 0.942l13.328-13.326c0.27-0.262 0.27-0.695 0-0.957zM1.144 0.205c-0.584-0.587-1.544 0.336-0.942 0.942l30.654 30.651c0.613 0.625 1.563-0.325 0.942-0.942z"></path>
+                    </svg>
+                </span>
+                <img class="modal-center" src="assets/traces/trace3.2.5.png">
+            </div>
+        </td>
+        <td>
+            <span class="modal-header" onclick="showModal('autoEvaluation3_2_5')"><img src="assets/icons/autoeval_vert.png" width="100%"></span>
+            <div class="modal hidden modal-txt" id="autoEvaluation3_2_5">
+                <div>
+                    <span id="x-button" class="close" onclick="closeModal('autoEvaluation3_2_5')">
+                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 32 32" fill="currentColor">
+                            <path d="M31.797 0.191c-0.264-0.256-0.686-0.25-0.942 0.015l-13.328 13.326c-0.598 0.581 0.342 1.543 0.942 0.942l13.328-13.326c0.27-0.262 0.27-0.695 0-0.957zM14.472 17.515c-0.264-0.256-0.686-0.25-0.942 0.015l-13.328 13.326c-0.613 0.595 0.34 1.562 0.942 0.942l13.328-13.326c0.27-0.262 0.27-0.695 0-0.957zM1.144 0.205c-0.584-0.587-1.544 0.336-0.942 0.942l30.654 30.651c0.613 0.625 1.563-0.325 0.942-0.942z"></path>
+                        </svg>
+                    </span>
+                </div>
+                <div class="modal-content">
+                    <p>Cette activité s'est déroulée sans difficultés particulières.</p>
+                    <p>Toutes les étapes ont été réalisées conformément aux attentes, sans rencontrer d'obstacles majeurs.</p>
+                    <p>L'installation et la configuration se sont faites de manière fluide, et les différents éléments ont fonctionné comme prévu.</p>
+                    <p>Les tests effectués ont confirmé le bon fonctionnement du système, garantissant des résultats conformes aux objectifs fixés.</p>
+                    <p>L'ensemble du processus s'est avéré efficace et maîtrisé, permettant d'atteindre les résultats escomptés sans imprévus.</p>
+                </div>
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <p class="p"><b>Stockage des données</b></p>
+            <p class="p">=> <b>objectif </b>Sauvegarder les donneés lues.</p>
+            <p class="p">=> <a class="modal-header disabled-link" disabled="disabled" onclick="showModal('description3_2_6')"><b>description </b></a>
+                <div class="modal hidden modal-txt" id="description3_2_6">
+                    <div>
+                        <span id="x-button" class="close" onclick="closeModal('description3_2_6')">
+                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 32 32" fill="currentColor">
+                                <path d="M31.797 0.191c-0.264-0.256-0.686-0.25-0.942 0.015l-13.328 13.326c-0.598 0.581 0.342 1.543 0.942 0.942l13.328-13.326c0.27-0.262 0.27-0.695 0-0.957zM14.472 17.515c-0.264-0.256-0.686-0.25-0.942 0.015l-13.328 13.326c-0.613 0.595 0.34 1.562 0.942 0.942l13.328-13.326c0.27-0.262 0.27-0.695 0-0.957zM1.144 0.205c-0.584-0.587-1.544 0.336-0.942 0.942l30.654 30.651c0.613 0.625 1.563-0.325 0.942-0.942z"></path>
+                            </svg>
+                        </span>
+                    </div>
+                    <div class="modal-content">
+                        <p class="p">Les donneés lues doivent être stockées dans une memoire avec un time stamp de maniere à pouvoir être lues par la suite et manipulées</p>
+                    </div>
+                </div>
+            </p>
+        </td>
+        <td>
+            <p class="modal-p"><a href="XXX" target="_blank">XXX</a></p>
+        </td>
+        <td>
+            <img class="modal-header" src="assets/traces/trace3.2.6.png" width="100%" onclick="showModal('trace3_2_6')">
+            <div class="modal hidden modal-img" id="trace3_2_6">
+                <span id="x-button" class="close" onclick="closeModal('trace3_2_6')">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 32 32" fill="currentColor">
+                        <path d="M31.797 0.191c-0.264-0.256-0.686-0.25-0.942 0.015l-13.328 13.326c-0.598 0.581 0.342 1.543 0.942 0.942l13.328-13.326c0.27-0.262 0.27-0.695 0-0.957zM14.472 17.515c-0.264-0.256-0.686-0.25-0.942 0.015l-13.328 13.326c-0.613 0.595 0.34 1.562 0.942 0.942l13.328-13.326c0.27-0.262 0.27-0.695 0-0.957zM1.144 0.205c-0.584-0.587-1.544 0.336-0.942 0.942l30.654 30.651c0.613 0.625 1.563-0.325 0.942-0.942z"></path>
+                    </svg>
+                </span>
+                <img class="modal-center" src="assets/traces/trace3.2.6.png">
+            </div>
+        </td>
+        <td>
+            <span class="modal-header" onclick="showModal('autoEvaluation3_2_6')"><img src="assets/icons/autoeval_rouge.png" width="100%"></span>
+            <div class="modal hidden modal-txt" id="autoEvaluation3_2_6">
+                <div>
+                    <span id="x-button" class="close" onclick="closeModal('autoEvaluation3_2_6')">
+                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 32 32" fill="currentColor">
+                            <path d="M31.797 0.191c-0.264-0.256-0.686-0.25-0.942 0.015l-13.328 13.326c-0.598 0.581 0.342 1.543 0.942 0.942l13.328-13.326c0.27-0.262 0.27-0.695 0-0.957zM14.472 17.515c-0.264-0.256-0.686-0.25-0.942 0.015l-13.328 13.326c-0.613 0.595 0.34 1.562 0.942 0.942l13.328-13.326c0.27-0.262 0.27-0.695 0-0.957zM1.144 0.205c-0.584-0.587-1.544 0.336-0.942 0.942l30.654 30.651c0.613 0.625 1.563-0.325 0.942-0.942z"></path>
+                        </svg>
+                    </span>
+                </div>
+                <div class="modal-content">
+                    <p>Activité non réalisée à ce jour.</p>
+                    <p>L'objectif de cette activité sera de garder en mémoire les différentes valeurs de manière à pouvoir afficher un ou plusieurs graphique montrant l'évolution de la consommation ou de la température en fonction du temps.</p>
+                </div>
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <p class="p"><b>Connexion au WiFi de l'ESP32</b></p>
+            <p class="p">=> <b>objectif </b>
+                <br>
+                Se connecter au WiFi de la carte de développemment pour acceder à la page web en local</p>
+            <p class="p">=> <b><a class="modal-header" onclick="showModal('description3_2_7')">description</a></b>
+                <div class="modal hidden modal-txt" id="description3_2_7">
+                    <div>
+                        <span id="x-button" class="close" onclick="closeModal('description3_2_7')">
+                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 32 32" fill="currentColor">
+                                <path d="M31.797 0.191c-0.264-0.256-0.686-0.25-0.942 0.015l-13.328 13.326c-0.598 0.581 0.342 1.543 0.942 0.942l13.328-13.326c0.27-0.262 0.27-0.695 0-0.957zM14.472 17.515c-0.264-0.256-0.686-0.25-0.942 0.015l-13.328 13.326c-0.613 0.595 0.34 1.562 0.942 0.942l13.328-13.326c0.27-0.262 0.27-0.695 0-0.957zM1.144 0.205c-0.584-0.587-1.544 0.336-0.942 0.942l30.654 30.651c0.613 0.625 1.563-0.325 0.942-0.942z"></path>
+                            </svg>
+                        </span>
+                    </div>
+                    <div class="modal-content">
+                        <h1>Étapes à suivre pour acceder à la page web de l'ESP32</h1>
+                        <h2>1. Rechercher le WiFi</h2>
+                        <p>Dans les parametres WiFi de votre appareil, selectionner le WiFi : <b>CED_ESP_AP</b></p>
+                        <p>Saisir le Mot de passe : <b>ESESae6*</b></p>
+                        <p>Ou scanner le QR code</p>
+                        <img src="assets/traces/trace3.2.7.jpg" style="max-width: 500px">
+                        <h2>2. Accéder à la page web</h2>
+                        <p>Se connecter à la page 192.168.4.1 depuis un navigateur.</p>
+                        <p>A noter que vous serez automatiquement dirigé vers cette page des la connexion au WiFi.
+                            <br> Car j'ai fais en sorte que le portail sois un portail captif.
+                        </p>
+                        <h1>Conclusion</h1>
+                        <p>Depuis cette interface il est possible de visualiser la consommation instantanée du capteur de courant et la température.</p>
+                        <p>De plus il est possible d'activer ou desactiver les deux LED connectées au microcontroleur.</p>
+                    </div>
+                </div>
+            </p>
+        </td>
+        <td>
+            <p class="modal-p"><a href="https://www.arduino.cc/en/software" target="_blank">Arduino IDE</a></p>
+            <p class="modal-p"><a href="https://chatgpt.com/" target="_blank">ChatGPT</a></p>
+        </td>
+        <td>
+            <img class="modal-header" src="assets/traces/trace3.2.7.jpg" width="100%" onclick="showModal('trace3_2_7')">
+            <div class="modal hidden modal-img" id="trace3_2_7">
+                <span id="x-button" class="close" onclick="closeModal('trace3_2_7')">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 32 32" fill="currentColor">
+                        <path d="M31.797 0.191c-0.264-0.256-0.686-0.25-0.942 0.015l-13.328 13.326c-0.598 0.581 0.342 1.543 0.942 0.942l13.328-13.326c0.27-0.262 0.27-0.695 0-0.957zM14.472 17.515c-0.264-0.256-0.686-0.25-0.942 0.015l-13.328 13.326c-0.613 0.595 0.34 1.562 0.942 0.942l13.328-13.326c0.27-0.262 0.27-0.695 0-0.957zM1.144 0.205c-0.584-0.587-1.544 0.336-0.942 0.942l30.654 30.651c0.613 0.625 1.563-0.325 0.942-0.942z"></path>
+                    </svg>
+                </span>
+                <img class="modal-center" src="assets/traces/trace3.2.7.jpg">
+            </div>
+        </td>
+        <td>
+            <span class="modal-header" onclick="showModal('autoEvaluation3_2_7')"><img src="assets/icons/autoeval_vert.png" width="100%"></span>
+            <div class="modal hidden modal-txt" id="autoEvaluation3_2_7">
+                <div>
+                    <span id="x-button" class="close" onclick="closeModal('autoEvaluation3_2_7')">
+                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 32 32" fill="currentColor">
+                            <path d="M31.797 0.191c-0.264-0.256-0.686-0.25-0.942 0.015l-13.328 13.326c-0.598 0.581 0.342 1.543 0.942 0.942l13.328-13.326c0.27-0.262 0.27-0.695 0-0.957zM14.472 17.515c-0.264-0.256-0.686-0.25-0.942 0.015l-13.328 13.326c-0.613 0.595 0.34 1.562 0.942 0.942l13.328-13.326c0.27-0.262 0.27-0.695 0-0.957zM1.144 0.205c-0.584-0.587-1.544 0.336-0.942 0.942l30.654 30.651c0.613 0.625 1.563-0.325 0.942-0.942z"></path>
+                        </svg>
+                    </span>
+                </div>
+                <div class="modal-content">
+                    <p>Cette activité s'est déroulée sans difficultés particulières.</p>
+                    <p>Toutes les étapes ont été réalisées conformément aux attentes, sans rencontrer d'obstacles majeurs.</p>
+                    <p>L'installation et la configuration se sont faites de manière fluide, et les différents éléments ont fonctionné comme prévu.</p>
+                    <p>Les tests effectués ont confirmé le bon fonctionnement du système, garantissant des résultats conformes aux objectifs fixés.</p>
+                    <p>L'ensemble du processus s'est avéré efficace et maîtrisé, permettant d'atteindre les résultats escomptés sans imprévus.</p>
+                </div>
+            </div>
+        </td>
+    </tr>
+    <!--tr>
+        <td>
+            <p class="p"><b>XXX</b></p>
+            <p class="p">=> <b>objectif </b>XXX.</p>
+            <p class="p">=> <b>description </b> [...] <a class="modal-header" onclick="showModal('description3_2_x')">Cliquez ici pour voir plus</a>
+                <div class="modal hidden modal-txt" id="description3_2_x">
+                    <div>
+                        <span id="x-button" class="close" onclick="closeModal('description3_2_x')">
+                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 32 32" fill="currentColor">
+                                <path d="M31.797 0.191c-0.264-0.256-0.686-0.25-0.942 0.015l-13.328 13.326c-0.598 0.581 0.342 1.543 0.942 0.942l13.328-13.326c0.27-0.262 0.27-0.695 0-0.957zM14.472 17.515c-0.264-0.256-0.686-0.25-0.942 0.015l-13.328 13.326c-0.613 0.595 0.34 1.562 0.942 0.942l13.328-13.326c0.27-0.262 0.27-0.695 0-0.957zM1.144 0.205c-0.584-0.587-1.544 0.336-0.942 0.942l30.654 30.651c0.613 0.625 1.563-0.325 0.942-0.942z"></path>
+                            </svg>
+                        </span>
+                    </div>
+                    <div class="modal-content">
+                        <p class="p">XXX</p>
+                    </div>
+                </div>
+            </p>
+        </td>
+        <td>
+            <p class="modal-p"><a href="XXX" target="_blank">XXX</a></p>
+        </td>
+        <td>
+            <img class="modal-header" src="assets/traces/trace3.2.x.png" width="100%" onclick="showModal('trace3_2_x')">
+            <div class="modal hidden modal-img" id="trace3_2_x">
+                <span id="x-button" class="close" onclick="closeModal('trace3_2_x')">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 32 32" fill="currentColor">
+                        <path d="M31.797 0.191c-0.264-0.256-0.686-0.25-0.942 0.015l-13.328 13.326c-0.598 0.581 0.342 1.543 0.942 0.942l13.328-13.326c0.27-0.262 0.27-0.695 0-0.957zM14.472 17.515c-0.264-0.256-0.686-0.25-0.942 0.015l-13.328 13.326c-0.613 0.595 0.34 1.562 0.942 0.942l13.328-13.326c0.27-0.262 0.27-0.695 0-0.957zM1.144 0.205c-0.584-0.587-1.544 0.336-0.942 0.942l30.654 30.651c0.613 0.625 1.563-0.325 0.942-0.942z"></path>
+                    </svg>
+                </span>
+                <img class="modal-center" src="assets/traces/trace3.2.x.png">
+            </div>
+        </td>
+        <td>
+            <span class="modal-header" onclick="showModal('autoEvaluation3_2_x')"><img src="assets/icons/autoeval_orange.png" width="100%"></span>
+            <div class="modal hidden modal-txt" id="autoEvaluation3_2_x">
+                <div>
+                    <span id="x-button" class="close" onclick="closeModal('autoEvaluation3_2_x')">
+                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 32 32" fill="currentColor">
+                            <path d="M31.797 0.191c-0.264-0.256-0.686-0.25-0.942 0.015l-13.328 13.326c-0.598 0.581 0.342 1.543 0.942 0.942l13.328-13.326c0.27-0.262 0.27-0.695 0-0.957zM14.472 17.515c-0.264-0.256-0.686-0.25-0.942 0.015l-13.328 13.326c-0.613 0.595 0.34 1.562 0.942 0.942l13.328-13.326c0.27-0.262 0.27-0.695 0-0.957zM1.144 0.205c-0.584-0.587-1.544 0.336-0.942 0.942l30.654 30.651c0.613 0.625 1.563-0.325 0.942-0.942z"></path>
+                        </svg>
+                    </span>
+                </div>
+                <div>
+                    <p>Mes impressions concernant l'autoévaluation ...</p>
+                </div>
+            </div>
+        </td>
+    </tr-->
+    </table>    
+    <h2>ANALYSE REFLEXIVE :</h2>
+    <p class="p">J'ai choisi ce projet car il permet de fusioner la consigne de la SAe avec un besoin personnel.</p>
+    <p class="p">L'objectif de cette SAé et de développer des compétences en rapport avec l'ESP32 et ce projet m'a permis de travailler sur l'acquisition de donnée, de son traitement et de son affichage par le moniteur série de l'IDE d'abord puis via un serveur web directement hebergé sur l'ESP par la suite.</p>
+    <p class="p">Ce projet peut devenir un produit réalisable en subissant quelques améliorations notament autour de l'ADC comme mentionner lors de la 4ème activité et de connecter plusieurs capteurs de courant. D'ajouter une carte SD pour obtenir un grand espace de stockage afin de constituer une Data Base et de pouvoir annalyser la consommation de différents consommateur.</p>
+    <p class="p">J'ai énormément appris grace à cette SAé, de plus le fait d'être seul et d'avoir choisi moi même ce qu'il y avait à faire m'a bien motivé.</p>
+</div>
+
+<section class="section footer" id="footer_area" style="bottom: 0px; width: 100%;">
+    <div id="footerContainer"></div>
+    <!--iframe id="footerFrame" src="footer.html" style="border:none;width:100%;height:365px;"></iframe-->
+</section>
+
+<button class="scroll-top">
+    <a href="#"><img src="assets/icons/scroll_to_top_white_icon2.png" width="30px"></a>
+</button>
+
+<script src="script.js"></script>
+
+</body>
+</html>

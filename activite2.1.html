@@ -1,0 +1,94 @@
+<!DOCTYPE html>                                 
+<html lang="fr-FR">
+
+<head> 
+    <meta charset="UTF-8">
+    <title>CR - PortFolio</title>
+    <link rel="shortcut icon" href="assets/icons/portfolio.ico" />
+    <link href="style.css" rel="stylesheet">
+</head>
+
+<body class="home">
+    <!--section class="retour"-->
+        <a class="nav retour" href="index.html#sae_area">Revenir sur la page des Projets</a>
+    </section>
+<div class="zone title">
+    <h1>Réalisation d'un Portfolio</h1>
+</div>
+<div class="zone">
+    <h2>Objectifs :</h2><p class="p">Réaliser un site internet sous forme d'un Portfolio. Ce support numérique permet de rassembler en un seul point
+    les compétences acquises durant la formation du BUT GEII, et donc rendre visibles les réalisations effectuées aux employeurs potentiels.      
+    Les Objectifs de cette activité sont de découvrir l'environnement html/css.</p>
+
+    <table class="taches">
+    <tr>
+        <th><b>Tâches réalisées</b></th>
+        <th><b>Ressources utilisées</b></th>
+        <th><b>Traces</b></th>
+        <th><b>Autoévaluation</b></th>
+    </tr>
+    <tr>
+        <td><b>Annalyser le contenu à intégrer</b><br>→ Il est demandé de réaliser un site internet
+        contenant une photo, une présentation personnelle, explication du contexte et des pages
+        descriptives des SAé effectuées durant le BUT - Traduire en Anglais</td>
+        <td>Environnement Numérique de Travail - Bureau Virtuel - "MonPortfolio.html" fourni par l'équipe d'encadrement</td>
+        <td>Ici Capture</td>
+        <td>Réalisé avec succès.</td>
+    </tr>
+    <tr>
+        <td><b>Créer une structure de fichier</b><br>→ Organiser le projet en créant une structure de fichiers logique</td>
+        <td>Editeur de texte<br></td>
+        <td>Ici Capture</td>
+        <td>Réalisé avec succès.</td>
+    </tr>
+    <tr>
+        <td><b>Initialiser le projet</b><br>→ A partir d'un éditeur de texte ouvrir un fichier .html et y inscrire les premiers "tag" necessaires   </td>
+        <td>Visual Studio Code</td>
+        <td>Ici Capture</td>
+        <td>Réalisé avec succès.</td>
+    </tr>
+    <tr>
+        <td><b>Importer les Images</b><br>→ Comme le logo, ma photo, les icones, et les images liées aux SAé</td>
+        <td>canva.com<br>icones8.fr</td>
+        <td>Ici Capture</td>
+        <td>Réalisé avec succès.</td>
+    </tr>
+    <tr>
+        <td><b>Ajout de lien</b><br>→ Création de liens permettant de naviguer entre les pages et d'accéder au profil LinkedIn, au référentiel de compétences et au CV</td>
+        <td>Visual Studio<br>W3School.com</td>
+        <td>Ici Capture</td>
+        <td>Réalisé avec succès.</td>
+    </tr>
+    <tr>
+        <td><b>Nom de la tâche</b> (avec verbe d'action)<br>=> <b>objectif</b> (texte libre, en quelques mots qui définissent les points importants que je vais qualifier pour l'autoévaluation)<br>=> <b>description</b></td>
+        <td>Ressources matérielles, logicielles, pédagogiques, documentaires.</td>
+        <td>Présenter et nommer la ou les preuve(s) qui atteste(nt) de la réalisation de cette tâche.</td>
+        <td>Bilan. Ai-je atteint l'objectif de cette tâche ?</td>
+    </tr>
+    </table>
+</div>
+
+<section class="section footer" id="footer_area" style="bottom: 0px; width: 100%;">
+    <div id="footerContainer"></div>
+    <!--iframe id="footerFrame" src="footer.html" style="border:none;width:100%;height:365px;"></iframe-->
+</section>
+
+<script>
+    const toggleButton = document.getElementById('toggleButton');
+
+    // Fonction pour basculer entre le français et l'anglais
+    function toggleLanguage() {
+        const selectedValue = toggleButton.value;
+        if (selectedValue === "fr") {
+            location.href = "../fr/but2.html";
+        } else if (selectedValue === "en") {
+            location.href = "../en/but2.html";
+        }
+    }
+
+    // Ajouter un gestionnaire d'événement au bouton de sélection
+    toggleButton.addEventListener('change', toggleLanguage);
+</script>
+
+</body>
+</html>
