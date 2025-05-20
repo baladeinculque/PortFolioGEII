@@ -73,22 +73,7 @@
     <!--iframe id="footerFrame" src="footer.html" style="border:none;width:100%;height:365px;"></iframe-->
 </section>
 
-<script>
-    const toggleButton = document.getElementById('toggleButton');
-
-    // Fonction pour basculer entre le français et l'anglais
-    function toggleLanguage() {
-        const selectedValue = toggleButton.value;
-        if (selectedValue === "fr") {
-            location.href = "../fr/but2.html";
-        } else if (selectedValue === "en") {
-            location.href = "../en/but2.html";
-        }
-    }
-
-    // Ajouter un gestionnaire d'événement au bouton de sélection
-    toggleButton.addEventListener('change', toggleLanguage);
-</script>
+<script src="script.js"></script>
 
 </body>
 </html>
