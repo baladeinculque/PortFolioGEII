@@ -1,0 +1,140 @@
+{
+  "3": {
+    "2":{
+      "project-title":{
+        "fr": "SAé - Prise en main de l'ESP32",
+        "en": "SAé - Getting Started with the ESP32"
+      },
+      "project-goal":{
+        "fr": "Développer des compétences concernant le microcontroleur ESP32 en créant un projet individuel et restituer ces compétences au travers d'un demonstrateur de compétences.",
+        "en": ""
+      },
+      "project-description":{
+        "fr": "Pour réaliser ce démonstrateur de compétences, je vais concevoir un module qui lit et enregistre des données. Pour ce faire je vais utiliser deux capteurs à ma disposition. Un capteur de courant et un capteur de temperature.\nCes données devront etre visible depuis un appareil exterieur en se connectant en WiFi à l'ESP32 pour y consulter une page web en local.",
+        "en": ""
+      },
+      "table-header":{
+        "col1-name":{
+          "fr": "Tâches réalisées",
+          "en": ""
+        },
+        "col2-name":{
+          "fr": "Ressources utilisées",
+          "en": "Used resources"
+        },
+        "col3-name":{
+          "fr": "Traces",
+          "en": "Traces"
+        },
+        "col4-name":{
+          "fr": "Autoévaluation",
+          "en": ""
+        }
+      },
+      "1":{
+        "task-title": {
+          "fr": "Rassembler les informations",
+          "en": ""
+        },
+        "task-goal": {
+          "fr": "Rassembler le maximum d'information possible concernant l'ESP32 : Son nombre de port, les fonctions intégrées ...",
+          "en": ""
+        },
+        "task-description": {
+          "fr": "",
+          "en": ""
+        },
+        "resource-keys": [
+          "ESP32-DevKit","Wroom-32"
+        ],
+        "autoeval":{
+          "pict-color": "green",
+          "content": {
+            "fr": "Cette activité s'est déroulée sans difficultés particulières.\nToutes les étapes ont été réalisées conformément aux attentes, sans rencontrer d'obstacles majeurs.\nL'installation et la configuration se sont faites de manière fluide, et les différents éléments ont fonctionné comme prévu.\nLes tests effectués ont confirmé le bon fonctionnement du système, garantissant des résultats conformes aux objectifs fixés.\nL'ensemble du processus s'est avéré efficace et maîtrisé, permettant d'atteindre les résultats escomptés sans imprévus.",
+            "en": ""
+          }
+        }
+      },
+      "2":{
+        "task-title": {
+          "fr": "",
+          "en": ""
+        },
+        "task-goal": {
+          "fr": "",
+          "en": ""
+        },
+        "task-description": {
+          "fr": "",
+          "en": ""
+        },
+        "resource-keys": [
+          "","",""
+        ],
+        "autoeval":{
+          "pict-color": "green",
+          "content": {
+            "fr": "Cette activité s'est déroulée sans difficultés particulières.\nToutes les étapes ont été réalisées conformément aux attentes, sans rencontrer d'obstacles majeurs.\nL'installation et la configuration se sont faites de manière fluide, et les différents éléments ont fonctionné comme prévu.\nLes tests effectués ont confirmé le bon fonctionnement du système, garantissant des résultats conformes aux objectifs fixés.\nL'ensemble du processus s'est avéré efficace et maîtrisé, permettant d'atteindre les résultats escomptés sans imprévus.",
+            "en": ""
+          }
+        }
+      },
+      "3":{
+        "task-title": {
+          "fr": "",
+          "en": ""
+        },
+        "task-goal": {
+          "fr": "",
+          "en": ""
+        },
+        "task-description": {
+          "fr": "",
+          "en": ""
+        },
+        "resource-keys": [
+          "","",""
+        ],
+        "autoeval":{
+          "pict-color": "green",
+          "content": {
+            "fr": "Cette activité s'est déroulée sans difficultés particulières.\nToutes les étapes ont été réalisées conformément aux attentes, sans rencontrer d'obstacles majeurs.\nL'installation et la configuration se sont faites de manière fluide, et les différents éléments ont fonctionné comme prévu.\nLes tests effectués ont confirmé le bon fonctionnement du système, garantissant des résultats conformes aux objectifs fixés.\nL'ensemble du processus s'est avéré efficace et maîtrisé, permettant d'atteindre les résultats escomptés sans imprévus.",
+            "en": ""
+          }
+        }
+      },
+      "4":{
+        "task-title": {
+          "fr": "",
+          "en": ""
+        },
+        "task-goal": {
+          "fr": "",
+          "en": ""
+        },
+        "task-description": {
+          "fr": "",
+          "en": ""
+        },
+        "resource-keys": [
+          "","",""
+        ],
+        "autoeval":{
+          "pict-color": "green",
+          "content": {
+            "fr": "Cette activité s'est déroulée sans difficultés particulières.\nToutes les étapes ont été réalisées conformément aux attentes, sans rencontrer d'obstacles majeurs.\nL'installation et la configuration se sont faites de manière fluide, et les différents éléments ont fonctionné comme prévu.\nLes tests effectués ont confirmé le bon fonctionnement du système, garantissant des résultats conformes aux objectifs fixés.\nL'ensemble du processus s'est avéré efficace et maîtrisé, permettant d'atteindre les résultats escomptés sans imprévus.",
+            "en": ""
+          }
+        }
+      },
+      "project-conclusion-title": {
+        "fr": "Analyse reflexive",
+        "": ""
+      },
+      "project-conclusion": {
+        "fr": "",
+        "en": ""
+      }
+    }
+  }
+}

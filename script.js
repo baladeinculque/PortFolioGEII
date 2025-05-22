@@ -121,6 +121,13 @@ window.addEventListener('resize', () => {
     }
 });
 
+// Fermer les modals avec Échap
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') {
+    document.querySelectorAll('.modal').forEach(modal => modal.classList.add('hidden'));
+  }
+});
+
 function showModal(modalID) {
     document.getElementById(modalID).classList.remove("hidden");
 }
@@ -138,8 +145,112 @@ const cvLink = document.getElementById("cvLink");
     }
   }
 
-  // Écouteur d'événements pour détecter le changement de langue
-  toggleButton.addEventListener("change", updateCVLink);
+async function renderProjectToHTML(annee, projet, lang = 'fr') {
+  try {
+    const response = await fetch('traces.json');
+    const data = await response.json();
+    const project = data[annee]?.[projet];
 
-  // Initialisation du lien au chargement de la page
-  updateCVLink();
+    if (!project) {
+      console.error("Projet non trouvé");
+      return;
+    }
+
+    // Injecter le titre
+    const titleDiv = document.querySelector('.zone.title');
+    titleDiv.innerHTML = `<h1>${project['project-title']?.[lang] || ''}</h1>`;
+
+    // Injecter l'objectif + description
+    const goalDescDiv = document.querySelectorAll('.zone')[1];
+    goalDescDiv.innerHTML = `
+      <h2>Objectif :</h2><p class="p">${project['project-goal']?.[lang] || ''}</p>
+      <h2>Description :</h2><p class="p">${(project['project-description']?.[lang] || '').replace(/\n/g, '<br>')}</p>
+    `;
+
+    // Injecter le tableau
+    const tableDiv = document.querySelectorAll('.zone')[2];
+    const table = document.createElement('table');
+    table.id = 'tableau';
+    table.style.width = '97%';
+
+    // Création de l'entête
+    const thead = document.createElement('thead');
+    const headerRow = document.createElement('tr');
+    const headers = project['table-header'];
+
+    const headerKeys = ['col1-name', 'col2-name', 'col3-name', 'col4-name'];
+    const widths = ['40%', '20%', '25%', '15%'];
+
+    headerKeys.forEach((key, i) => {
+      const th = document.createElement('th');
+      th.textContent = headers[key]?.[lang] || '';
+      th.style.width = widths[i];
+      headerRow.appendChild(th);
+    });
+
+    thead.appendChild(headerRow);
+    table.appendChild(thead);
+
+    // Création du corps
+    const tbody = document.createElement('tbody');
+    for (let tache = 1; tache <= 50; tache++) {
+      const task = project[tache];
+      if (!task) continue;
+
+      const row = document.createElement('tr');
+
+      // Colonne 1 : tâche
+      const col1 = document.createElement('td');
+      col1.innerHTML = `<strong>${task['task-title']?.[lang] || ''}</strong><br>${task['task-goal']?.[lang] || ''}`;
+      col1.style.width = widths[0];
+
+      // Colonne 2 : ressources
+      const col2 = document.createElement('td');
+      col2.innerHTML = (task['resource-keys'] || []).filter(r => r).join('<br>');
+      col2.style.width = widths[1];
+
+      // Colonne 3 : trace image
+      const col3 = document.createElement('td');
+      const img = document.createElement('img');
+      img.src = `assets/traces/trace${annee}.${projet}.${tache}.png`;
+      img.alt = `trace${annee}.${projet}.${tache}`;
+      img.classList.add('trace-img');
+      img.style.maxWidth = '100%';
+      col3.appendChild(img);
+      col3.style.width = widths[2];
+
+      // Colonne 4 : autoévaluation
+      const col4 = document.createElement('td');
+      col4.style.borderLeft = `6px solid ${task.autoeval?.['pict-color'] || 'gray'}`;
+      col4.innerHTML = (task.autoeval?.content?.[lang] || '').replace(/\n/g, '<br>');
+      col4.style.width = widths[3];
+
+      row.appendChild(col1);
+      row.appendChild(col2);
+      row.appendChild(col3);
+      row.appendChild(col4);
+
+      tbody.appendChild(row);
+    }
+
+    table.appendChild(tbody);
+    tableDiv.innerHTML = ''; // Nettoyer avant insertion
+    tableDiv.appendChild(table);
+
+    // Injecter la conclusion
+    const conclusionDiv = document.querySelectorAll('.zone')[3];
+    conclusionDiv.innerHTML = `
+      <h2>${project['project-conclusion-title']?.[lang] || ''}</h2>
+      <p>${(project['project-conclusion']?.[lang] || '').replace(/\n/g, '<br>')}</p>
+    `;
+
+  } catch (err) {
+    console.error('Erreur de chargement :', err);
+  }
+}
+
+// Écouteur d'événements pour détecter le changement de langue
+toggleButton.addEventListener("change", updateCVLink);
+
+// Initialisation du lien au chargement de la page
+updateCVLink();

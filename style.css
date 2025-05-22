@@ -75,6 +75,9 @@ header a{
         cursor: pointer;
     }
 }
+.retour {    
+    color: #fff;
+}
 .scroll-top {
     position: fixed;
     background: none;
@@ -389,14 +392,16 @@ th{
     padding-bottom: 20px;
     text-align: center;
 }
-table.taches td:nth-child(1){
+table.taches td:nth-child(1), table.taches th:nth-child(1){
     width: 40%;
 }
-table.taches td:nth-child(2){
+table.taches td:nth-child(2), table.taches th:nth-child(2){
     width: 20%;
-}table.taches td:nth-child(3){
+}
+table.taches td:nth-child(3), table.taches th:nth-child(3){
     width: 25%;
-}table.taches td:nth-child(4){
+}
+table.taches td:nth-child(4), table.taches td:nth-child(4){
     width: 15%;
 }
 .taches tr:nth-child(odd){background-color: #747578a3;}
