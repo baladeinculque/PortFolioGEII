@@ -31,8 +31,8 @@
             "category": "Datasheet"
         },
         {
-            "resource-key": "Arduino-resource-keyE",
-            "title": "Arduino resource-keyE",
+            "resource-key": "Arduino-resource-key",
+            "title": "Arduino resource-key",
             "url": "https://www.arduino.cc/en/software",
             "category": "User manuel"
         },
@@ -61,16 +61,82 @@
             "category": "TUTO"
         },
         {
-            "resource-key": "",
+            "resource-key": "WebServer",
             "title": "Web Server utilisant Server-Sent Events",
             "url": "https://randomnerdtutorials.com/esp32-web-server-sent-events-sse/?utm_source=chatgpt.com",
             "category": "TUTO"
         },
         {
-            "resource-key": "",
-            "title": "",
-            "url": "",
-            "category": ""
+            "resource-key": "FreeCSS",
+            "title": "Free Templates",
+            "url": "https://www.free-css.com/",
+            "category": "Online help"
+        },
+        {
+            "resource-key": "PortFolioExamples",
+            "title": "Exemples gratuit de PortFolio",
+            "url": "https://github.com/topics/portfolio",
+            "category": "Online help"
+        },
+        {
+            "resource-key": "DealingWithFiles",
+            "title": "Organiser les fichiers",
+            "url": "https://developer.mozilla.org/fr/docs/Learn/Getting_started_with_the_web/Dealing_with_files",
+            "category": "Online help"
+        },
+        {
+            "resource-key": "CreateWebSite",
+            "title": "OpenClassrooms - Créer site web",
+            "url": "https://openclassrooms.com/fr/courses/6812771",
+            "category": "Online help"
+        },
+        {
+            "resource-key": "Arborescence",
+            "title": "Vidéo Arborescence",
+            "url": "https://www.youtube.com/watch?v=es27E5cZyqU",
+            "category": "Online help"
+        },
+        {
+            "resource-key": "HTML",
+            "title": "HyperText Markup Language",
+            "url": "https://developer.mozilla.org/fr/docs/Web/HTML",
+            "category": "Online help"
+        },
+        {
+            "resource-key": "CSS",
+            "title": "Cascading Style Sheets",
+            "url": "https://developer.mozilla.org/fr/docs/Web/CSS",
+            "category": "Online help"
+        },
+        {
+            "resource-key": "Responsive",
+            "title": "Conception Responsive",
+            "url": "https://developer.mozilla.org/fr/docs/Learn_web_development/Core/CSS_layout/Responsive_Design",
+            "category": "Online help"
+        },
+        {
+            "resource-key": "Validator",
+            "title": "W3 Service Validation",
+            "url": "https://validator.w3.org/",
+            "category": "Online help"
+        },
+        {
+            "resource-key": "GitHubPages",
+            "title": "Guide GitHub Pages",
+            "url": "https://pages.github.com/",
+            "category": "Online help"
+        },
+        {
+            "resource-key": "JavaScript",
+            "title": "JavaScript pour débutant",
+            "url": "https://developer.mozilla.org/fr/docs/Web/JavaScript/Guide/Introduction",
+            "category": "Online help"
+        },
+        {
+            "resource-key": "DarkMode",
+            "title": "CSS : prefers-colors-scheme",
+            "url": "https://developer.mozilla.org/fr/docs/Web/CSS/@media/prefers-color-scheme",
+            "category": "Online help"
         }
     ]
 }
